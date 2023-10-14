@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "数据类型"
-date:   2023-10-014 16:23:00 +0800
+date:   2023-10-14 16:23:00 +0800
 author: Zhangyvjing
 ---
 **Python 数据类型**
