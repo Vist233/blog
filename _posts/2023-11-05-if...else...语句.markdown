@@ -1,0 +1,137 @@
+---
+layout: post
+title:  "if...else...语句"
+date:   2023-11-05 17:02:12 +0800
+author: Zhangyvjing
+---
+**Python 中 if 语句 else**
+
+**概述**
+
+if 语句是 Python 中的基本条件控制语句，用于根据条件判断来决定是否执行某些代码。
+
+**语法**
+
+```python
+if 判断条件：
+    执行语句1
+else：
+    执行语句2
+```
+
+**判断条件**
+
+判断条件可以是任何可以返回 True 或 False 的表达式，例如：
+
+* 关系运算符：`==`、`!=`、`>`、`<`、`>=`、`<=`
+* 逻辑运算符：`and`、`or`、`not`
+* 布尔值：`True`、`False`
+
+**执行语句**
+
+执行语句是满足条件时要执行的代码。执行语句可以是单行语句，也可以是多行语句，以缩进来区分。
+
+**else 语句**
+
+else 语句是可选的，如果 else 语句存在，则在 if 判断条件不成立时执行 else 语句中的代码。
+
+**示例**
+
+```python
+# 判断一个数字是否为偶数
+
+number = 10
+
+if number % 2 == 0:
+    print("number 是偶数")
+else:
+    print("number 是奇数")
+```
+
+输出：
+
+```
+number 是偶数
+```
+
+**嵌套 if 语句**
+
+可以使用嵌套 if 语句来实现更复杂的逻辑判断。
+
+```python
+# 判断一个数字是否为正数、负数或零
+
+number = -10
+
+if number > 0:
+    print("number 是正数")
+elif number == 0:
+    print("number 是零")
+else:
+    print("number 是负数")
+```
+
+输出：
+
+```
+number 是负数
+```
+
+**练习题**
+
+1. 编写一个程序判断一个字符串是否为空。
+2. 编写一个程序判断一个年份是否是闰年。
+3. 编写一个程序判断一个数是否为素数。
+
+**答案**
+
+1. 以下代码可以判断一个字符串是否为空：
+
+```python
+# 判断一个字符串是否为空
+
+string = ""
+
+if string == "":
+    print("string 为空")
+else:
+    print("string 不为空")
+```
+
+2. 以下代码可以判断一个年份是否是闰年：
+
+```python
+# 判断一个年份是否是闰年
+
+year = 2023
+
+if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0:
+    print(year, "是闰年")
+else:
+    print(year, "不是闰年")
+```
+
+3. 以下代码可以判断一个数是否为素数：
+
+```python
+# 判断一个数是否为素数
+
+number = 10
+
+# 判断 number 是否小于 2
+
+if number < 2:
+    print(number, "不是素数")
+
+# 遍历 2 到 number - 1 之间的所有数字
+
+for i in range(2, number):
+    # 如果 number 可以被 i 整除，则 number 不是素数
+    if number % i == 0:
+        print(number, "不是素数")
+        break
+
+# 如果 number 没有被任何数字整除，则 number 是素数
+else:
+    print(number, "是素数")
+```
