@@ -1,0 +1,75 @@
+---
+layout: post
+title:  "while"
+date:   2023-11-07 12:34:36 +0800
+author: Zhangyvjing
+---
+while 语句用于在某条件下，循环执行某段程序，以处理需要重复处理的相同任务。
+
+**while 语句的语法**
+
+```python
+while 条件:
+    # 循环体
+```
+
+**条件**
+
+条件是一个布尔表达式，用于判断循环是否继续执行。如果条件为 True，则循环体将被执行；如果条件为 False，则循环将结束。
+
+**循环体**
+
+循环体是 while 语句中执行的代码块。循环体可以包含各种语句，包括算术运算、条件语句、循环语句等。
+
+**while 语句的使用**
+
+while 语句可以用于以下场景：
+
+* 计算斐波那契数列：
+
+```python
+a, b = 0, 1
+while b < 100:
+    print(b)
+    a, b = b, a + b
+```
+
+* 输出 1 到 100 的所有整数：
+
+```python
+i = 1
+while i <= 100:
+    print(i)
+    i += 1
+```
+
+* 从用户输入的整数中找出最大值：
+
+```python
+num = int(input("请输入一个整数："))
+max_num = num
+while True:
+    num = int(input("请输入另一个整数："))
+    if num > max_num:
+        max_num = num
+    else:
+        continue
+    print("最大值是：", max_num)
+```
+
+**while 语句的注意事项**
+
+* while 语句可能会导致无限循环，因此在使用时要注意条件的判断。
+* while 语句可以与 break 语句和 continue 语句结合使用，以控制循环的执行。
+
+**预习建议**
+
+* 阅读 Python 教程或文档，了解 while 语句的语法、使用和注意事项。
+* 尝试编写一些简单的 while 语句，练习使用 while 语句。
+* 理解 while 语句与 break 语句和 continue 语句的结合使用。
+
+**复习建议**
+
+* 回顾 while 语句的语法、使用和注意事项，确保您已经掌握了 while 语句的核心概念。
+* 练习编写一些复杂的 while 语句，挑战自己的编程能力。
+* 使用 while 语句解决实际问题。
