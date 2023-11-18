@@ -1,0 +1,27 @@
+---
+layout: post
+title:  "自學網址"
+date:   2023-11-18 12:34:56 +0800
+author: Zhangyvjing
+---
+**Python 初学者自学指南**
+
+**第一部分：文档**
+
+* **Python 官方网站**：Python 官方网站提供了 Python 语言的官方文档，涵盖了 Python 的基础知识和高级概念。这是最标准的文档，所有问题在这里一定能找到答案。
+    https://docs.python.org/zh-cn/3.9/
+* **noob**：这是一个非常受欢迎的 Python 入门教程，以模块化的方式介绍 Python 的基础知识。
+    https://www.runoob.com/python3/python3-list.html
+
+推荐将这一部分的文档作为自己学习的笔记查询地以及复习地。
+
+
+**第二部分：推荐课程**
+
+以下是一些推荐的 Python 初学者课程：
+
+* **python全栈教学**：我初学python所上的课程，由于课程太过于全面，只需找到自己需要的课程学习即可。
+    https://www.bilibili.com/video/BV1U54y1S79r/?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click
+* **cs61a**：这是一个由加州大学伯克利分校提供的免费在线课程，适合有一定基础的 Python 学习者。该课程适合经常使用python以及准备学习编程思维的人
+    https://www.cs61a.org
+
