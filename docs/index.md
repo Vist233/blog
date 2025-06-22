@@ -9,7 +9,7 @@ Welcome to my personal corner of the internet! I'm passionate about technology, 
 
 ### 📝 Recent Posts
 
-Check out my latest thoughts and tutorials in the [Blog section](blog/).
+Check out my latest thoughts and tutorials in the [Blog section](blog/index.md).
 
 ### 🛠️ Technologies I Love
 
