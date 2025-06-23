@@ -29,8 +29,8 @@ Check out my latest thoughts and tutorials in the [Blog section](blog/index.md).
 
 Feel free to reach out and connect with me:
 
-[Connect on GitHub](https://github.com/your-username){ .md-button .md-button--primary }
-[Follow on Twitter](https://twitter.com/your-username){ .md-button }
+[Connect on GitHub](https://github.com/Vist233){ .md-button .md-button--primary }
+[Follow on Twitter](https://x.com/zhangyvjing233){ .md-button }
 
 ---
 
