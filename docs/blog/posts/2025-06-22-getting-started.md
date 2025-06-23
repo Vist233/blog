@@ -1,7 +1,5 @@
 ---
 date: 2025-06-22
-authors:
-  - your-name
 categories:
   - Getting Started
   - Tutorial
@@ -71,4 +69,4 @@ Stay tuned for more posts!
 
 ---
 
-*Thanks for reading! Feel free to connect with me on [GitHub](https://github.com/your-username).*
+*Thanks for reading! Feel free to connect with me on [GitHub](https://github.com/Vist233).*
