@@ -54,8 +54,8 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  icon:
-    logo: logo
+  logo: assert/logo.png
+  favicon: assert/logo.png
 
 plugins:
   - blog:
@@ -90,7 +90,8 @@ markdown_extensions:
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.inlinehilite
-  - pymdownx.keys  - pymdownx.magiclink:
+  - pymdownx.keys
+  - pymdownx.magiclink:
       normalize_issue_symbols: true
       repo_url_shorthand: true
       user: Vist233
@@ -116,9 +117,9 @@ extra:
     - icon: fontawesome/brands/twitter
       link: https://x.com/zhangyvjing233
     - icon: fontawesome/brands/bilibili
-      link: https://space.bilibili.com/your-uid
+      link: https://space.bilibili.com/3546802183735742?spm_id_from=333.1007.0.0
     - icon: simple/zhihu
-      link: https://www.zhihu.com/people/your-username
+      link: https://www.zhihu.com/people/vist-18
 
 nav:
   - Home: index.md
