@@ -1,14 +1,14 @@
-site_name: My Blog
-site_url: https://your-username.github.io/blog/
-site_author: Your Name
+site_name: Vist's Blog
+site_url: https://vist233.github.io/blog/
+site_author: Vist
 site_description: >-
   Welcome to my personal blog where I share my thoughts, experiences, 
   and knowledge about technology, programming, and life.
 
-repo_name: your-username/blog
-repo_url: https://github.com/your-username/blog
+repo_name: Vist233/blog
+repo_url: https://github.com/Vist233/blog
 
-copyright: Copyright &copy; 2025 Your Name
+copyright: Copyright &copy; 2025 Vist
 
 theme:
   name: material
@@ -90,11 +90,10 @@ markdown_extensions:
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.inlinehilite
-  - pymdownx.keys
-  - pymdownx.magiclink:
+  - pymdownx.keys  - pymdownx.magiclink:
       normalize_issue_symbols: true
       repo_url_shorthand: true
-      user: your-username
+      user: Vist233
       repo: blog
   - pymdownx.mark
   - pymdownx.smartsymbols
@@ -113,11 +112,17 @@ markdown_extensions:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/your-username
+      link: https://github.com/Vist233
     - icon: fontawesome/brands/twitter
-      link: https://twitter.com/your-username
+      link: https://x.com/zhangyvjing233
+    - icon: fontawesome/brands/bilibili
+      link: https://space.bilibili.com/your-uid
+    - icon: simple/zhihu
+      link: https://www.zhihu.com/people/your-username
 
 nav:
   - Home: index.md
   - Blog:
     - blog/index.md
+  - Life:
+    - Life/index.md
