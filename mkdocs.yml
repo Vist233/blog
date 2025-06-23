@@ -54,8 +54,8 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  logo: assert/logo.png
-  favicon: assert/logo.png
+  logo: assets/logo.png
+  favicon: assets/logo.png
 
 plugins:
   - blog:
