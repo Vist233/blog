@@ -1,9 +1,30 @@
-# Blog
+# 技术博客
 
-Welcome to my blog! Here you'll find my latest posts about technology, programming, and various topics I'm passionate about.
+欢迎来到我的技术分享空间！这里记录我在系统架构、智能Agent、后端开发等领域的实践经验和思考总结。
 
 ---
 
-## Featured Posts
+## 📖 文章分类
 
-<!-- The blog index will automatically populate with your posts -->
+### 🤖 Agent 系统
+深入探索智能Agent的架构设计、多Agent协作、记忆机制等前沿技术实践。
+
+- [Unity × Agent：一次关于现实边界的系统搭建实验](游戏Agent系统搭建.md) - 记录了从Unity工具选择到性能优化的完整开发过程
+
+### 🏗️ 后端架构
+分享Java Spring Boot、Python、数据库等后端技术的项目实战与系统设计。
+
+*更多内容正在整理中...*
+
+### 🛠️ 基础设施与工具链
+自动化部署、开发效率工具、系统设计等实用技术分享。
+
+*敬请期待...*
+
+---
+
+## 💡 写作理念
+
+> 不制造焦虑、不吹捧技术潮流，只记录我真正做过、踩过坑、反复思考的项目与路径。
+
+每一篇文章都来自真实的项目经验，包含完整的问题分析、解决方案和反思总结。

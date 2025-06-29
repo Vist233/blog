@@ -122,7 +122,11 @@ extra:
 
 nav:
   - Home: index.md
-  - Blog:
+  - Tech-Blog:
     - blog/index.md
+    - Agent:
+      - blog/游戏Agent系统搭建.md
   - Life:
-    - Life/index.md
+    - life/index.md
+    - Activaty-Reflection:
+      - life/NingBo.md

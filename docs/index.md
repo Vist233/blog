@@ -30,6 +30,41 @@
 
 ## 联系我
 
-[在 GitHub 上查看项目](https://github.com/Vist233){ .md-button .md-button--primary }  
-[在 Twitter 上联系我](https://x.com/zhangyvjing233){ .md-button }
+欢迎通过以下方式与我交流讨论：
+
+<div class="grid cards" markdown>
+
+-   :fontawesome-brands-github:{ .lg } **GitHub**
+
+    ---
+
+    查看我的开源项目和代码实现
+
+    [:octicons-arrow-right-24: 访问 GitHub](https://github.com/Vist233)
+
+-   :fontawesome-brands-x-twitter:{ .lg } **Twitter/X**
+
+    ---
+
+    日常技术分享和思考动态
+
+    [:octicons-arrow-right-24: 关注 Twitter](https://x.com/zhangyvjing233)
+
+-   :simple-bilibili:{ .lg } **Bilibili**
+
+    ---
+
+    技术视频和项目演示
+
+    [:octicons-arrow-right-24: 关注 Bilibili](https://space.bilibili.com/3546802183735742?spm_id_from=333.1007.0.0)
+
+-   :simple-zhihu:{ .lg } **知乎**
+
+    ---
+
+    深度技术文章和经验分享
+
+    [:octicons-arrow-right-24: 关注知乎](https://www.zhihu.com/people/vist-18)
+
+</div>
 
