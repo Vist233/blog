@@ -2,11 +2,6 @@
 
 这是一个专注于系统架构、智能 Agent、后端开发与理性思考的个人空间。
 
-## 博客简介
-
-!!! info "关于本博客"
-    本博客基于 [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) 构建，追求简洁、快速与高可读性。
-
 ### 🧠 我的关注方向
 
 - **Agent 系统**：结构化输出、函数调用、多 Agent 协作与记忆机制的系统性探索  
