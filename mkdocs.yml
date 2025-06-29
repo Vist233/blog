@@ -13,24 +13,12 @@ copyright: Copyright &copy; 2025 Vist
 theme:
   name: material
   features:
-    - announce.dismiss
-    - content.action.edit
-    - content.action.view
-    - content.code.annotate
     - content.code.copy
-    - content.tabs.link
-    - content.tooltips
-    - navigation.expand
     - navigation.footer
-    - navigation.indexes
-    - navigation.sections
-    - navigation.tabs
     - navigation.top
-    - navigation.tracking
     - search.highlight
     - search.share
     - search.suggest
-    - toc.follow
   language: en
   palette:
     - media: "(prefers-color-scheme)"
@@ -54,20 +42,13 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  logo: assets/logo.png  
+  logo: assets/logo.png
   favicon: assets/logo.png
 
 plugins:
-  - blog:
-      blog_toc: true
-      post_date_format: full
-      post_url_format: "{date}/{slug}"
-  - search:
-      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
-  - tags
+  - search
 
 markdown_extensions:
-  - abbr
   - admonition
   - attr_list
   - def_list
@@ -75,39 +56,15 @@ markdown_extensions:
   - md_in_html
   - toc:
       permalink: true
-  - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.caret
   - pymdownx.details
   - pymdownx.emoji:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
       emoji_index: !!python/name:material.extensions.emoji.twemoji
   - pymdownx.highlight:
       anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.keys
-  - pymdownx.magiclink:
-      normalize_issue_symbols: true
-      repo_url_shorthand: true
-      user: Vist233
-      repo: blog
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tabbed:
-      alternate_style: true
-      combine_header_slug: true
+  - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
-  - pymdownx.tilde
 
 extra:
   social:
@@ -119,14 +76,3 @@ extra:
       link: https://space.bilibili.com/3546802183735742?spm_id_from=333.1007.0.0
     - icon: simple/zhihu
       link: https://www.zhihu.com/people/vist-18
-
-nav:
-  - Home: index.md
-  - Tech-Blog:
-    - blog/index.md
-    - Agent:
-      - blog/游戏Agent系统搭建.md
-  - Life:
-    - life/index.md
-    - Activaty-Reflection:
-      - life/NingBo.md
