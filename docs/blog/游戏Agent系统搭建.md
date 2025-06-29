@@ -1,12 +1,5 @@
 ---
 date: 2025-06-29
-categories:
-  - Unity
-  - AI
-tags:
-  - unity
-  - agent
-  - ai
 ---
 
 # Unity × Agent：一次关于现实边界的系统搭建实验
