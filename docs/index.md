@@ -47,5 +47,13 @@
 
     [:octicons-arrow-right-24: 访问 GitHub](https://github.com/Vist233)
 
+-   :fontawesome-brands-github:{ .lg } **Email**
+
+    ---
+
+    通过邮件与我联系
+
+    [:octicons-arrow-right-24: 发送邮件](mailto:zhangyvjing@outlook.com)
+
 </div>
 
