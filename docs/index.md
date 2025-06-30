@@ -47,7 +47,7 @@
 
     [:octicons-arrow-right-24: 访问 GitHub](https://github.com/Vist233)
 
--   :fontawesome-brands-github:{ .lg } **Email**
+-   :fontawesome-brands-envelope:{ .lg } **Email**
 
     ---
 

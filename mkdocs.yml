@@ -70,9 +70,5 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/Vist233
-    - icon: fontawesome/brands/twitter
-      link: https://x.com/zhangyvjing233
-    - icon: fontawesome/brands/bilibili
-      link: https://space.bilibili.com/3546802183735742?spm_id_from=333.1007.0.0
-    - icon: simple/zhihu
-      link: https://www.zhihu.com/people/vist-18
+    - icon: fontawesome/brands/email
+      link: mailto:zhangyvjing@outlook.com
