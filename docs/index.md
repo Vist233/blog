@@ -47,13 +47,5 @@
 
     [:octicons-arrow-right-24: 访问 GitHub](https://github.com/Vist233)
 
--   :fontawesome-brands-x-twitter:{ .lg } **Twitter/X**
-
-    ---
-
-    日常技术分享和思考动态
-
-    [:octicons-arrow-right-24: 关注 Twitter](https://x.com/zhangyvjing233)
-
 </div>
 
