@@ -55,21 +55,5 @@
 
     [:octicons-arrow-right-24: 关注 Twitter](https://x.com/zhangyvjing233)
 
--   :simple-bilibili:{ .lg } **Bilibili**
-
-    ---
-
-    技术视频和项目演示
-
-    [:octicons-arrow-right-24: 关注 Bilibili](https://space.bilibili.com/3546802183735742?spm_id_from=333.1007.0.0)
-
--   :simple-zhihu:{ .lg } **知乎**
-
-    ---
-
-    深度技术文章和经验分享
-
-    [:octicons-arrow-right-24: 关注知乎](https://www.zhihu.com/people/vist-18)
-
 </div>
 
