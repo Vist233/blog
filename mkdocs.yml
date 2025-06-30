@@ -70,5 +70,5 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/Vist233
-    - icon: fontawesome/brands/email
+    - icon: fontawesome/solid/envelope
       link: mailto:zhangyvjing@outlook.com
