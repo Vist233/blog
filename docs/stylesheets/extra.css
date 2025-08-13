@@ -1,0 +1,38 @@
+/* 方案1：适中大小的logo (推荐) */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  width: 36px !important;
+  height: 36px !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+
+.md-header__button.md-logo {
+  padding: 6px !important;
+}
+
+/* 方案2：更大的logo (如果你想要更显眼的效果，取消下面的注释)
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  width: 48px !important;
+  height: 48px !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+
+.md-header__button.md-logo {
+  padding: 4px !important;
+}
+*/
+
+/* 确保logo和标题的对齐 */
+.md-header__title {
+  margin-left: 8px;
+  line-height: 48px;
+}
+
+/* 可选：给logo添加一些悬停效果 */
+.md-header__button.md-logo:hover {
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
