@@ -1,9 +1,8 @@
-site_name: Vist's Blog
+site_name: Vist Archive
 site_url: https://vist233.github.io/blog/
 site_author: Vist
 site_description: >-
-  Welcome to my personal blog where I share my thoughts, experiences, 
-  and knowledge about technology, programming, and life.
+  Notes on agent engineering, backend systems, product judgment, and quiet design.
 
 repo_name: Vist233/blog
 repo_url: https://github.com/Vist233/blog
@@ -27,20 +26,20 @@ theme:
         name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: black
+      accent: lime
       toggle:
         icon: material/toggle-switch
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
-      accent: indigo
+      accent: lime
       toggle:
         icon: material/toggle-switch-off
         name: Switch to system preference
   font:
-    text: Roboto
+    text: Inter
     code: Roboto Mono
   logo: assets/logo.png
   favicon: assets/logo.png
@@ -50,6 +49,12 @@ extra_css:
 
 plugins:
   - search
+  - rss:
+      match_path: ".*"
+      date_from_meta:
+        as_creation: date
+      categories:
+        - tags
 
 markdown_extensions:
   - admonition
@@ -73,5 +78,7 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/Vist233
+    - icon: fontawesome/solid/rss
+      link: feed_rss_created.xml
     - icon: fontawesome/solid/envelope
       link: mailto:zhangyvjing@outlook.com
