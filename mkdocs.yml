@@ -4,40 +4,18 @@ site_author: Vist
 site_description: >-
   Notes on agent engineering, backend systems, product judgment, and quiet design.
 
-repo_name: Vist233/blog
-repo_url: https://github.com/Vist233/blog
-
 copyright: Copyright &copy; 2025 Vist
 
 theme:
   name: material
+  custom_dir: overrides
   features:
     - content.code.copy
-    - navigation.footer
     - navigation.top
     - search.highlight
     - search.share
     - search.suggest
   language: en
-  palette:
-    - media: "(prefers-color-scheme)"
-      toggle:
-        icon: material/link
-        name: Switch to light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: black
-      accent: lime
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: black
-      accent: lime
-      toggle:
-        icon: material/toggle-switch-off
-        name: Switch to system preference
   font:
     text: Inter
     code: Roboto Mono
@@ -75,10 +53,4 @@ markdown_extensions:
       custom_checkbox: true
 
 extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/Vist233
-    - icon: fontawesome/solid/rss
-      link: feed_rss_created.xml
-    - icon: fontawesome/solid/envelope
-      link: mailto:zhangyvjing@outlook.com
+  homepage: /
