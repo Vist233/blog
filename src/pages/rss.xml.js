@@ -12,7 +12,7 @@ export async function GET(context) {
 
   return rss({
     title: "Vist Archive",
-    description: "Notes on agent engineering, backend systems, and product judgment.",
+    description: "Notes on product judgment and technical systems in the AI era.",
     site,
     items: posts.map((post) => ({
       title: post.data.title,

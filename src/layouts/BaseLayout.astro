@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
 
-const { title = "Vist Archive", description = "Quiet systems. Verifiable work." } = Astro.props;
+const { title = "Vist Archive", description = "Product judgment and technical systems in the AI era." } = Astro.props;
 const base = import.meta.env.BASE_URL.endsWith("/")
   ? import.meta.env.BASE_URL
   : `${import.meta.env.BASE_URL}/`;
@@ -31,7 +31,7 @@ const base = import.meta.env.BASE_URL.endsWith("/")
       <slot />
       <footer class="site-footer">
         <span>VIST / ARCHIVE</span>
-        <span>Quiet systems. Verifiable work.</span>
+        <span>Product judgment. Technical systems.</span>
         <span>You can subscribe to the writing through <a href={`${base}rss.xml`}>RSS</a>.</span>
       </footer>
     </div>
