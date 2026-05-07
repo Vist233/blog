@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
 
-const { title = "Vist Archive", description = "Product judgment and technical systems in the AI era." } = Astro.props;
+const { title = "zhangyvjing Archive", description = "Agent engineering. Evidence over noise." } = Astro.props;
 const base = import.meta.env.BASE_URL.endsWith("/")
   ? import.meta.env.BASE_URL
   : `${import.meta.env.BASE_URL}/`;
@@ -20,7 +20,7 @@ const base = import.meta.env.BASE_URL.endsWith("/")
       <nav class="site-nav" aria-label="Site navigation">
         <a class="brand" href="https://zhangyvjing.com/">
           <span class="signal"></span>
-          <span>VIST / PUBLIC</span>
+          <span>ZHANGYVJING / PUBLIC</span>
         </a>
         <div class="nav-links">
           <a href={base}>Blog</a>
@@ -30,8 +30,7 @@ const base = import.meta.env.BASE_URL.endsWith("/")
       </nav>
       <slot />
       <footer class="site-footer">
-        <span>VIST / ARCHIVE</span>
-        <span>Product judgment. Technical systems.</span>
+        <span>ZHANGYVJING / ARCHIVE</span>
         <span>
           <a href={`${base}rss.xml`}>RSS</a>
           ·

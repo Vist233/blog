@@ -82,7 +82,7 @@ a {
   justify-content: space-between;
   gap: 24px;
   border-bottom: 1px solid var(--line-strong);
-  font: 11px/1 var(--font-mono);
+  font: 13px/1 var(--font-mono);
   text-transform: uppercase;
 }
 
@@ -116,9 +116,9 @@ a {
 }
 
 .site-footer {
-  min-height: 76px;
+  min-height: 64px;
   display: grid;
-  grid-template-columns: 0.7fr 1fr 1.3fr;
+  grid-template-columns: 1fr 1fr;
   gap: 28px;
   align-items: center;
   border-top: 1px solid var(--line-strong);
@@ -338,9 +338,6 @@ h1 {
 }
 
 .archive-head {
-  display: grid;
-  grid-template-columns: 190px minmax(0, 1fr);
-  gap: 36px;
   padding-bottom: 38px;
   border-bottom: 1px solid var(--line-strong);
 }
@@ -410,7 +407,8 @@ h1 {
   top: 24px;
   align-self: start;
   max-height: calc(100svh - 48px);
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   border-top: 1px solid var(--line-strong);
   padding-top: 18px;
 }
