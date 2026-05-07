@@ -49,9 +49,8 @@ body {
   background:
     linear-gradient(90deg, color-mix(in srgb, var(--ink) 4%, transparent) 1px, transparent 1px),
     linear-gradient(180deg, color-mix(in srgb, var(--ink) 4%, transparent) 1px, transparent 1px),
-    linear-gradient(90deg, transparent 0 calc(100% - 14px), var(--signal-soft) calc(100% - 14px) 100%),
     var(--paper);
-  background-size: 48px 48px, 48px 48px, auto, auto;
+  background-size: 48px 48px, 48px 48px, auto;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -60,9 +59,8 @@ body {
       linear-gradient(90deg, rgba(242, 242, 239, 0.04) 1px, transparent 1px),
       linear-gradient(180deg, rgba(242, 242, 239, 0.03) 1px, transparent 1px),
       radial-gradient(circle at 42% 0%, rgba(242, 242, 239, 0.07), transparent 28rem),
-      linear-gradient(90deg, transparent 0 calc(100% - 14px), var(--signal-soft) calc(100% - 14px) 100%),
       var(--paper);
-    background-size: 84px 84px, 84px 84px, auto, auto, auto;
+    background-size: 84px 84px, 84px 84px, auto, auto;
   }
 }
 
@@ -681,7 +679,6 @@ h1 {
 @media (max-width: 900px) {
   /* Collapse grids */
   .site-nav,
-  .site-footer,
   .hero,
   .archive-head,
   .post-shell {
@@ -775,6 +772,7 @@ h1 {
   .post-aside {
     position: static;
     max-height: none;
+    border-top: none;
   }
 
   .toc {
@@ -793,6 +791,7 @@ h1 {
 
   /* Footer: keep 2-col left/right split on all screen sizes */
   .site-footer {
+    grid-template-columns: 1fr 1fr;
     min-height: auto;
     padding: 16px 0;
   }
