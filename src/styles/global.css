@@ -83,7 +83,6 @@ a {
   gap: 24px;
   border-bottom: 1px solid var(--line-strong);
   font: 13px/1 var(--font-mono);
-  text-transform: uppercase;
 }
 
 .brand,
@@ -124,7 +123,6 @@ a {
   border-top: 1px solid var(--line-strong);
   color: var(--muted);
   font: 11px/1.5 var(--font-mono);
-  text-transform: uppercase;
 }
 
 .site-footer a {
