@@ -726,6 +726,8 @@ h1 {
     width: 100%;
     overflow-x: auto;
     gap: 20px;
+    align-self: flex-end;
+    justify-content: flex-end;
   }
 
   /* Hero */
