@@ -351,7 +351,7 @@ h1 {
 }
 
 .archive-title {
-  font-size: clamp(48px, 8vw, 112px);
+  font-size: clamp(28px, 5vw, 64px);
   line-height: 0.9;
   font-weight: 600;
 }
@@ -763,10 +763,6 @@ h1 {
     grid-template-columns: 1fr;
   }
 
-  /* Archive head */
-  .archive-title {
-    font-size: clamp(42px, 12vw, 96px);
-  }
 
   /* Post article */
   .post-aside {
@@ -812,9 +808,6 @@ h1 {
     font-size: clamp(28px, 12vw, 48px);
   }
 
-  .archive-title {
-    font-size: clamp(36px, 13vw, 72px);
-  }
 
   .field {
     min-height: 190px;
