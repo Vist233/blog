@@ -613,33 +613,60 @@ h1 {
 }
 
 .post-switcher {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1px;
+  display: flex;
+  align-items: center;
   margin-top: 64px;
-  border: 1px solid var(--line-strong);
-  background: var(--line-strong);
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line-strong);
 }
 
 .post-switcher div {
-  min-height: 112px;
-  display: grid;
-  gap: 14px;
-  align-content: start;
-  padding: 16px;
-  background: var(--paper);
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 0;
+  min-width: 0;
+  background: none;
+}
+
+.post-switcher div:first-child {
+  padding-right: 24px;
+}
+
+.post-switcher div:last-child {
+  justify-content: flex-end;
+  padding-left: 24px;
+  border-left: 1px solid var(--line);
+  text-align: right;
+}
+
+/* arrow glyphs via span */
+.post-switcher div:first-child::before {
+  content: '←';
+  flex-shrink: 0;
+  color: var(--muted);
+  font: 14px/1 var(--font-mono);
+}
+
+.post-switcher div:last-child::after {
+  content: '→';
+  flex-shrink: 0;
+  color: var(--muted);
+  font: 14px/1 var(--font-mono);
 }
 
 .post-switcher span {
-  color: var(--muted);
-  font: 12px/1 var(--font-mono);
-  text-transform: uppercase;
+  display: none;
 }
 
 .post-switcher a {
-  font-size: clamp(18px, 2.4vw, 28px);
-  line-height: 1.1;
+  font: 13px/1.4 var(--font-sans);
+  color: var(--ink);
   text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .post-switcher a:hover {
@@ -649,6 +676,7 @@ h1 {
 
 .post-switcher em {
   color: var(--muted);
+  font: 12px/1 var(--font-mono);
   font-style: normal;
 }
 
@@ -658,9 +686,25 @@ h1 {
   .hero,
   .archive-head,
   .post-list li,
-  .post-shell,
-  .post-switcher {
+  .post-shell {
     grid-template-columns: 1fr;
+  }
+
+  .post-switcher {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .post-switcher div:last-child {
+    border-left: none;
+    border-top: 1px solid var(--line);
+    justify-content: flex-start;
+    text-align: left;
+    padding-left: 0;
+  }
+
+  .post-switcher div:last-child::after {
+    order: -1;
   }
 
   .site-nav,
