@@ -1,1 +1,4 @@
 prompt/
+node_modules/
+.astro/
+dist/

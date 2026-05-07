@@ -1,0 +1,39 @@
+---
+import "../styles/global.css";
+
+const { title = "Vist Archive", description = "Quiet systems. Verifiable work." } = Astro.props;
+const base = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="alternate" type="application/rss+xml" title="Vist Archive RSS" href={`${base}rss.xml`} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="shell">
+      <nav class="site-nav" aria-label="Site navigation">
+        <a class="brand" href={base}>
+          <span class="signal"></span>
+          <span>VIST / PUBLIC</span>
+        </a>
+        <div class="nav-links">
+          <a href={`${base}writing/`}>Blog</a>
+          <a href="https://github.com/Vist233">GitHub</a>
+          <a href="mailto:zhangyvjing@outlook.com">Contact</a>
+        </div>
+      </nav>
+      <slot />
+      <footer class="site-footer">
+        <span>VIST / ARCHIVE</span>
+        <span>Quiet systems. Verifiable work.</span>
+        <span>You can subscribe to the writing through <a href={`${base}rss.xml`}>RSS</a>.</span>
+      </footer>
+    </div>
+  </body>
+</html>

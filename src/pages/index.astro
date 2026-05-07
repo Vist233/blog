@@ -1,0 +1,56 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const base = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+---
+<BaseLayout title="Vist Archive" description="A quiet design system for verifiable agent engineering work.">
+  <main class="hero">
+    <section class="hero-title">
+      <div>
+        <p class="kicker">Personal public system / agent engineering</p>
+        <h1 class="hero-heading">
+          <span>Quiet</span>
+          <span class="hollow">systems</span>
+          <span>Visible work</span>
+        </h1>
+      </div>
+      <div class="statement statement-grid">
+        <span>00</span>
+        <p>
+          A black-and-white field for agent engineering, backend systems, design judgment,
+          and the public evidence that survives outside the notebook.
+        </p>
+      </div>
+    </section>
+    <section class="field" aria-label="Abstract winter field">
+      <svg viewBox="0 0 760 960" role="img">
+        <path d="M0 707 C140 652 231 674 342 630 C465 581 548 561 760 594 L760 960 L0 960 Z"></path>
+        <path d="M0 743 C152 715 255 735 386 690 C509 648 618 639 760 656 L760 960 L0 960 Z"></path>
+        <line x1="119" y1="213" x2="119" y2="725"></line>
+        <line x1="388" y1="96" x2="388" y2="707"></line>
+        <line x1="603" y1="262" x2="603" y2="642"></line>
+      </svg>
+      <span class="signal"></span>
+      <span class="field-label">Winter field / structure / low noise</span>
+    </section>
+  </main>
+  <section class="home-directions" aria-label="Primary directions">
+    <a href="https://github.com/Vist233">
+      <span>01</span>
+      <strong>Engineering trace</strong>
+      <small>GitHub profile, repositories, public work.</small>
+    </a>
+    <a href={`${base}writing/`}>
+      <span>02</span>
+      <strong>Writing archive</strong>
+      <small>Markdown notes generated into static HTML.</small>
+    </a>
+    <a href="mailto:zhangyvjing@outlook.com">
+      <span>03</span>
+      <strong>Contact</strong>
+      <small>Direct mail for collaboration and conversation.</small>
+    </a>
+  </section>
+</BaseLayout>

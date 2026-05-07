@@ -1,0 +1,48 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+const { post, headings = [], previous = null, next = null } = Astro.props;
+const { title, description, date, tags = [] } = post.data;
+const base = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+const toc = headings.filter((heading) => heading.depth > 1 && heading.depth < 4);
+---
+<BaseLayout title={`${title} / Vist Archive`} description={description ?? title}>
+  <main class="post-shell">
+    <aside class="post-aside" aria-label="Article table of contents">
+      <a class="back-link" href={`${base}writing/`}>Back to index</a>
+      {toc.length > 0 && (
+        <nav class="toc">
+          <p>On this page</p>
+          {toc.map((heading) => (
+            <a class={`depth-${heading.depth}`} href={`#${heading.slug}`}>{heading.text}</a>
+          ))}
+        </nav>
+      )}
+    </aside>
+    <div class="post-main">
+      <header class="post-header">
+        <p class="meta">
+          {date.toISOString().slice(0, 10)}
+          {tags.length ? ` / ${tags.join(" / ")}` : ""}
+        </p>
+        <h1 class="post-title">{title}</h1>
+        {description && <p class="statement">{description}</p>}
+      </header>
+      <article class="post-body">
+        <slot />
+      </article>
+      <nav class="post-switcher" aria-label="Article navigation">
+        <div>
+          <span>Previous</span>
+          {previous ? <a href={`${base}writing/${previous.slug}/`}>{previous.data.title}</a> : <em>Start of archive</em>}
+        </div>
+        <div>
+          <span>Next</span>
+          {next ? <a href={`${base}writing/${next.slug}/`}>{next.data.title}</a> : <em>Latest article</em>}
+        </div>
+      </nav>
+    </div>
+  </main>
+</BaseLayout>

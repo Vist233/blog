@@ -1,0 +1,37 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+const base = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+---
+<BaseLayout title="Blog / Vist Archive" description="A generated index of Markdown notes.">
+  <main class="archive-page">
+    <header class="archive-head">
+      <div class="section-code">Generated from Markdown<br />RSS / Static HTML</div>
+      <div>
+        <h1 class="archive-title">Writing<br /><span class="hollow">index</span></h1>
+        <p class="statement">
+          This is the only directory page. The homepage stays clean; every Markdown file becomes a static article page through CI.
+        </p>
+      </div>
+    </header>
+    <ol class="post-list">
+      {posts.map((post, index) => (
+        <li>
+          <span class="post-no">{String(index + 1).padStart(2, "0")}</span>
+          <div>
+            <time class="meta" datetime={post.data.date.toISOString()}>{post.data.date.toISOString().slice(0, 10)}</time>
+            <a href={`${base}writing/${post.slug}/`}>{post.data.title}</a>
+            {post.data.description && <p>{post.data.description}</p>}
+          </div>
+          <span class="meta tags">{post.data.tags.join(" / ")}</span>
+        </li>
+      ))}
+    </ol>
+  </main>
+</BaseLayout>
