@@ -39,11 +39,13 @@ html {
   color: var(--ink);
   font-family: var(--font-sans);
   letter-spacing: 0;
+  overflow-x: hidden;
 }
 
 body {
   min-width: 320px;
   margin: 0;
+  overflow-x: hidden;
   background:
     linear-gradient(90deg, color-mix(in srgb, var(--ink) 4%, transparent) 1px, transparent 1px),
     linear-gradient(180deg, color-mix(in srgb, var(--ink) 4%, transparent) 1px, transparent 1px),
@@ -176,8 +178,7 @@ h1 {
   font-size: clamp(52px, 9.2vw, 132px);
   line-height: 0.95;
   font-weight: 650;
-  overflow-x: hidden;
-  overflow-y: visible;
+  overflow: clip;
   padding-bottom: 0.1em;
 }
 
@@ -420,8 +421,7 @@ h1 {
   top: 24px;
   align-self: start;
   max-height: calc(100svh - 48px);
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: hidden;
   border-top: 1px solid var(--line-strong);
   padding-top: 18px;
 }
