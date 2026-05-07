@@ -18,7 +18,7 @@ export async function GET(context) {
       title: post.data.title,
       description: post.data.description ?? post.data.title,
       pubDate: post.data.date,
-      link: new URL(`writing/${post.slug}/`, site).toString(),
+      link: new URL(`${post.slug}/`, site).toString(),
     })),
   });
 }

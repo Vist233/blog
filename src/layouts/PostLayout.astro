@@ -11,7 +11,7 @@ const toc = headings.filter((heading) => heading.depth > 1 && heading.depth < 4)
 <BaseLayout title={`${title} / Vist Archive`} description={description ?? title}>
   <main class="post-shell">
     <aside class="post-aside" aria-label="Article table of contents">
-      <a class="back-link" href={`${base}writing/`}>Back to index</a>
+      <a class="back-link" href={base}>Back to index</a>
       {toc.length > 0 && (
         <nav class="toc">
           <p>On this page</p>
@@ -36,11 +36,11 @@ const toc = headings.filter((heading) => heading.depth > 1 && heading.depth < 4)
       <nav class="post-switcher" aria-label="Article navigation">
         <div>
           <span>Previous</span>
-          {previous ? <a href={`${base}writing/${previous.slug}/`}>{previous.data.title}</a> : <em>Start of archive</em>}
+          {previous ? <a href={`${base}${previous.slug}/`}>{previous.data.title}</a> : <em>Start of archive</em>}
         </div>
         <div>
           <span>Next</span>
-          {next ? <a href={`${base}writing/${next.slug}/`}>{next.data.title}</a> : <em>Latest article</em>}
+          {next ? <a href={`${base}${next.slug}/`}>{next.data.title}</a> : <em>Latest article</em>}
         </div>
       </nav>
     </div>
