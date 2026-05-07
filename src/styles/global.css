@@ -132,6 +132,10 @@ a {
   text-decoration-color: var(--signal);
 }
 
+.footer-links {
+  text-align: right;
+}
+
 .hero {
   min-height: calc(100svh - 58px);
   display: grid;

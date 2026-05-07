@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
 
-const { title = "zhangyvjing Archive", description = "Agent engineering. Evidence over noise." } = Astro.props;
+const { title = "ZhangYvJing Archive", description = "Finding the balance between product and engineering." } = Astro.props;
 const base = import.meta.env.BASE_URL.endsWith("/")
   ? import.meta.env.BASE_URL
   : `${import.meta.env.BASE_URL}/`;
@@ -12,7 +12,7 @@ const base = import.meta.env.BASE_URL.endsWith("/")
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <link rel="alternate" type="application/rss+xml" title="Vist Archive RSS" href={`${base}rss.xml`} />
+    <link rel="alternate" type="application/rss+xml" title="ZhangYvJing Archive RSS" href={`${base}rss.xml`} />
     <title>{title}</title>
   </head>
   <body>
@@ -20,7 +20,7 @@ const base = import.meta.env.BASE_URL.endsWith("/")
       <nav class="site-nav" aria-label="Site navigation">
         <a class="brand" href="https://zhangyvjing.com/">
           <span class="signal"></span>
-          <span>ZHANGYVJING / PUBLIC</span>
+          <span>ZhangYvJing / Public</span>
         </a>
         <div class="nav-links">
           <a href={base}>Blog</a>
@@ -30,8 +30,8 @@ const base = import.meta.env.BASE_URL.endsWith("/")
       </nav>
       <slot />
       <footer class="site-footer">
-        <span>ZHANGYVJING / ARCHIVE</span>
-        <span>
+        <span>ZhangYvJing / Archive</span>
+        <span class="footer-links">
           <a href={`${base}rss.xml`}>RSS</a>
           ·
           <a href="https://www.zhihu.com/people/vist-18">Zhihu</a>
