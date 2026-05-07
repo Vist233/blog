@@ -344,7 +344,7 @@ h1 {
 }
 
 .archive-page {
-  padding: 64px 0 84px;
+  padding: 64px 0 0;
 }
 
 .archive-head {
@@ -413,7 +413,7 @@ h1 {
   display: grid;
   grid-template-columns: 220px minmax(0, 820px);
   gap: 48px;
-  padding: 64px 0 92px;
+  padding: 64px 0 0;
 }
 
 .post-aside {
@@ -796,16 +796,14 @@ h1 {
     line-height: 1.75;
   }
 
-  /* Footer */
+  /* Footer: keep 2-col left/right split on all screen sizes */
   .site-footer {
-    grid-template-columns: 1fr;
-    gap: 10px;
     min-height: auto;
     padding: 16px 0;
   }
 
   .footer-links {
-    text-align: left;
+    text-align: right;
   }
 }
 
