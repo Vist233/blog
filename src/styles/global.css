@@ -174,8 +174,11 @@ h1 {
   display: grid;
   gap: 0.04em;
   font-size: clamp(52px, 9.2vw, 132px);
-  line-height: 0.9;
+  line-height: 0.95;
   font-weight: 650;
+  overflow-x: hidden;
+  overflow-y: visible;
+  padding-bottom: 0.1em;
 }
 
 .hero-heading span,
@@ -272,21 +275,25 @@ h1 {
   stroke-width: 1;
 }
 
-.field-label {
-  position: absolute;
-  top: 18px;
-  left: 40px;
-  z-index: 1;
-  color: var(--ink);
-  font: 11px/1.4 var(--font-mono);
-  text-transform: uppercase;
-}
-
-.field .signal {
+.field-header {
   position: absolute;
   top: 18px;
   left: 18px;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.field-header .signal {
+  position: static;
+  flex-shrink: 0;
+}
+
+.field-label {
+  color: var(--ink);
+  font: 11px/1.4 var(--font-mono);
+  text-transform: uppercase;
 }
 
 .home-directions {
@@ -362,6 +369,10 @@ h1 {
   gap: 28px;
   padding: 28px 0;
   border-bottom: 1px solid var(--line);
+}
+
+.post-list li:last-child {
+  border-bottom: none;
 }
 
 .post-no {
