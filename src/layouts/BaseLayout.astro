@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
 
-const { title = "ZhangYvJing Archive", description = "Finding the balance between product and engineering." } = Astro.props;
+const { title = "ZhangYvJing Blog", description = "Finding the balance between product and engineering." } = Astro.props;
 const base = import.meta.env.BASE_URL.endsWith("/")
   ? import.meta.env.BASE_URL
   : `${import.meta.env.BASE_URL}/`;
@@ -19,7 +19,7 @@ const base = import.meta.env.BASE_URL.endsWith("/")
       href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap"
     />
     <link rel="icon" href={`${base}favicon.png`} type="image/png" />
-    <link rel="alternate" type="application/rss+xml" title="ZhangYvJing Archive RSS" href={`${base}rss.xml`} />
+    <link rel="alternate" type="application/rss+xml" title="ZhangYvJing Blog RSS" href={`${base}rss.xml`} />
     <title>{title}</title>
   </head>
   <body>
@@ -37,7 +37,7 @@ const base = import.meta.env.BASE_URL.endsWith("/")
       </nav>
       <slot />
       <footer class="site-footer">
-        <span>ZhangYvJing / Archive</span>
+        <span>ZhangYvJing / Blog</span>
         <span class="footer-links">
           <a href={`${base}rss.xml`}>RSS</a>
           ·

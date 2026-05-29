@@ -36,7 +36,7 @@ const toc = headings.filter((heading) => heading.depth > 1 && heading.depth < 4)
       <nav class="post-switcher" aria-label="Article navigation">
         <div>
           <span>Previous</span>
-          {previous ? <a href={`${base}${previous.slug}/`}>{previous.data.title}</a> : <em>Start of archive</em>}
+          {previous ? <a href={`${base}${previous.slug}/`}>{previous.data.title}</a> : <em>First article</em>}
         </div>
         <div>
           <span>Next</span>

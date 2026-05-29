@@ -11,7 +11,7 @@ export async function GET(context) {
   const site = new URL(base, context.site).toString();
 
   return rss({
-    title: "Vist Archive",
+    title: "ZhangYvJing Blog",
     description: "Notes on product judgment and technical systems in the AI era.",
     site,
     items: posts.map((post) => ({
