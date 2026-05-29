@@ -82,8 +82,8 @@ a {
   justify-content: space-between;
   gap: 24px;
   border-bottom: 1px solid var(--line-strong);
-  font-size: 0.95rem;
-  line-height: 1.3;
+  font-size: 0.88rem;
+  line-height: 1.25;
   font-weight: 500;
 }
 
@@ -124,8 +124,8 @@ a {
   align-items: center;
   border-top: 1px solid var(--line-strong);
   color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1.5;
+  font-size: 0.82rem;
+  line-height: 1.45;
 }
 
 .site-footer a {
@@ -159,8 +159,8 @@ a {
 .meta,
 .post-no {
   color: var(--muted);
-  font-size: 0.92rem;
-  line-height: 1.55;
+  font-size: 0.82rem;
+  line-height: 1.45;
   font-weight: 500;
 }
 
@@ -201,8 +201,8 @@ h1 {
   border-top: 1px solid var(--line-strong);
   padding-top: 22px;
   color: color-mix(in srgb, var(--ink) 76%, var(--muted));
-  font-size: clamp(1.18rem, 1.25rem + 0.55vw, 1.65rem);
-  line-height: 1.65;
+  font-size: clamp(1.02rem, 1.02rem + 0.45vw, 1.36rem);
+  line-height: 1.55;
 }
 
 .statement p {
@@ -360,8 +360,8 @@ h1 {
 }
 
 .archive-title {
-  font-size: clamp(2.6rem, 1.6rem + 3.4vw, 4.8rem);
-  line-height: 0.96;
+  font-size: clamp(2.1rem, 1.45rem + 2.4vw, 3.8rem);
+  line-height: 0.98;
   font-weight: 600;
 }
 
@@ -375,7 +375,7 @@ h1 {
   display: grid;
   grid-template-columns: 74px minmax(0, 1fr) 180px;
   gap: 28px;
-  padding: 34px 0;
+  padding: 28px 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -396,18 +396,18 @@ h1 {
 .post-list a {
   display: block;
   margin-top: 8px;
-  font-size: clamp(2rem, 1.35rem + 1.8vw, 3.2rem);
-  line-height: 1.18;
+  font-size: clamp(1.56rem, 1.18rem + 1.1vw, 2.4rem);
+  line-height: 1.16;
   font-weight: 600;
   text-decoration: none;
 }
 
 .post-list p {
   max-width: 720px;
-  margin: 14px 0 0;
+  margin: 10px 0 0;
   color: var(--muted);
-  font-size: 1.08rem;
-  line-height: 1.78;
+  font-size: 0.98rem;
+  line-height: 1.68;
 }
 
 .post-list a:hover {
@@ -441,7 +441,7 @@ h1 {
   color: #050505;
   background: var(--signal);
   padding: 7px 9px;
-  font-size: 0.86rem;
+  font-size: 0.78rem;
   line-height: 1;
   font-weight: 600;
   text-decoration: none;
@@ -450,8 +450,8 @@ h1 {
 .toc {
   display: grid;
   gap: 10px;
-  font-size: 0.9rem;
-  line-height: 1.6;
+  font-size: 0.82rem;
+  line-height: 1.5;
 }
 
 .toc p {
@@ -487,16 +487,16 @@ h1 {
 
 .post-title {
   margin: 10px 0 0;
-  font-size: clamp(2.8rem, 1.8rem + 3.4vw, 5.4rem);
-  line-height: 1.08;
+  font-size: clamp(2.15rem, 1.55rem + 2.2vw, 4rem);
+  line-height: 1.04;
   font-weight: 600;
   letter-spacing: 0;
   word-break: keep-all;
 }
 
 .post-body {
-  font-size: clamp(1.12rem, 1.02rem + 0.18vw, 1.22rem);
-  line-height: 1.95;
+  font-size: clamp(1rem, 0.96rem + 0.12vw, 1.08rem);
+  line-height: 1.82;
 }
 
 .post-body > h1:first-child {
@@ -511,11 +511,11 @@ h1 {
 }
 
 .post-body h2 {
-  margin: 3.8rem 0 1.1rem;
+  margin: 3rem 0 0.95rem;
   padding-top: 1rem;
   border-top: 1px solid var(--line);
-  font-size: clamp(1.8rem, 1.5rem + 0.9vw, 2.2rem);
-  line-height: 1.3;
+  font-size: clamp(1.5rem, 1.28rem + 0.55vw, 1.9rem);
+  line-height: 1.28;
   font-weight: 600;
 }
 
@@ -531,9 +531,9 @@ h1 {
 }
 
 .post-body h3 {
-  margin: 2.6rem 0 0.9rem;
-  font-size: clamp(1.35rem, 1.2rem + 0.45vw, 1.7rem);
-  line-height: 1.4;
+  margin: 2.1rem 0 0.75rem;
+  font-size: clamp(1.18rem, 1.1rem + 0.25vw, 1.38rem);
+  line-height: 1.36;
   font-weight: 600;
 }
 
@@ -677,8 +677,8 @@ h1 {
 }
 
 .post-switcher a {
-  font-size: 0.98rem;
-  line-height: 1.5;
+  font-size: 0.9rem;
+  line-height: 1.45;
   font-weight: 500;
   color: var(--ink);
   text-decoration: none;
@@ -694,7 +694,7 @@ h1 {
 
 .post-switcher em {
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: 0.8rem;
   line-height: 1.2;
   font-style: normal;
 }
@@ -805,8 +805,8 @@ h1 {
   }
 
   .post-body {
-    font-size: 1.06rem;
-    line-height: 1.88;
+    font-size: 0.98rem;
+    line-height: 1.78;
   }
 
   /* Footer: keep 2-col left/right split on all screen sizes */
@@ -849,7 +849,7 @@ h1 {
   }
 
   .post-list a {
-    font-size: clamp(1.7rem, 1.2rem + 2.8vw, 2.5rem);
+    font-size: clamp(1.42rem, 1.1rem + 2.2vw, 2rem);
     margin-top: 0;
   }
 
@@ -860,11 +860,11 @@ h1 {
 
   /* Post title */
   .post-title {
-    font-size: clamp(2rem, 1.45rem + 2.5vw, 2.8rem);
+    font-size: clamp(1.74rem, 1.28rem + 2.1vw, 2.4rem);
   }
 
   /* Statement */
   .statement {
-    font-size: clamp(1rem, 0.9rem + 1.2vw, 1.2rem);
+    font-size: clamp(0.94rem, 0.86rem + 1vw, 1.08rem);
   }
 }

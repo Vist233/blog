@@ -1,5 +1,7 @@
 ---
+title: Vist Archive
 date: 2026-05-06
+description: Personal archive for verifiable work.
 tags:
   - archive
   - agent-engineering
@@ -52,22 +54,22 @@ tags:
       <tr>
         <td>Agent Engineering</td>
         <td>Tool boundaries, structured outputs, eval-driven loops.</td>
-        <td><a href="%E4%BB%8E%20Prompt%20%E5%88%B0%E5%B7%A5%E7%A8%8B%E7%B3%BB%E7%BB%9F%EF%BC%9ALLM%20%E4%BD%95%E6%97%B6%E5%BF%85%E9%A1%BB%E8%A2%AB%E5%B7%A5%E7%A8%8B%E5%8C%96/">Prompt to engineering system</a></td>
+        <td><a href="/blog/prompt-to-engineering-system/">Prompt to engineering system</a></td>
       </tr>
       <tr>
         <td>Workflow Design</td>
         <td>Human defines the problem; AI accelerates execution.</td>
-        <td><a href="%E5%AF%B9AIWorkFlow%E7%9A%84%E8%AE%BE%E6%83%B3/">AI workflow design notes</a></td>
+        <td><a href="/blog/ai-workflow-design/">AI workflow design notes</a></td>
       </tr>
       <tr>
         <td>Applied Systems</td>
         <td>Games, agents, product constraints, real boundaries.</td>
-        <td><a href="UnityGame/">Unity x Agent experiment</a></td>
+        <td><a href="/blog/unity-agent/">Unity x Agent experiment</a></td>
       </tr>
       <tr>
         <td>Reality Notes</td>
         <td>Career, cities, choices, and visible evidence.</td>
-        <td><a href="ResumeChangeAndWork/">Work diary</a></td>
+        <td><a href="/blog/work-diary/">Work diary</a></td>
       </tr>
     </tbody>
   </table>
@@ -94,6 +96,6 @@ tags:
 <section class="link-band">
   <a href="https://github.com/Vist233">GitHub</a>
   <a href="https://github.com/Vist233/Vist233">Profile</a>
-  <a href="feed_rss_created.xml">RSS</a>
+  <a href="/blog/rss.xml">RSS</a>
   <a href="mailto:zhangyvjing@outlook.com">Email</a>
 </section>
