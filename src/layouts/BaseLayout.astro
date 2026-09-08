@@ -27,10 +27,11 @@ const base = import.meta.env.BASE_URL.endsWith("/")
       <nav class="site-nav" aria-label="Site navigation">
         <a class="brand" href="https://zhangyvjing.com/">
           <span class="signal"></span>
-          <span>ZhangYvJing / Public</span>
+          <span>ZhangYvJing</span>
         </a>
         <div class="nav-links">
-          <a href={base}>Blog</a>
+          <a href="https://zhangyvjing.com/works/">Works</a>
+          <a href={base} aria-current="page">Blog</a>
           <a href="https://github.com/Vist233">GitHub</a>
           <a href="mailto:zhangyvjing@outlook.com">Contact</a>
         </div>
@@ -40,8 +41,6 @@ const base = import.meta.env.BASE_URL.endsWith("/")
         <span>ZhangYvJing / Blog</span>
         <span class="footer-links">
           <a href={`${base}rss.xml`}>RSS</a>
-          ·
-          <a href="https://www.zhihu.com/people/vist-18">Zhihu</a>
           ·
           <a href="https://x.com/zhangyvjing233">X</a>
         </span>

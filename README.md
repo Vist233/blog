@@ -1,3 +1,3 @@
-# Hi There this is Vist233's own blog.
+# ZhangYvJing Blog
 
-Visit my blog at: [https://z.monolythe.shop/blog/](https://z.monolythe.shop/blog/)
+Visit the blog at [zhangyvjing.com/blog](https://zhangyvjing.com/blog/).
