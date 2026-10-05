@@ -2,3 +2,4 @@ prompt/
 node_modules/
 .astro/
 dist/
+.DS_Store
