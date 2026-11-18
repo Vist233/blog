@@ -1,35 +1,40 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Introducing Sakura: A Complete Coding Agent, Yours to Define"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap"><link rel="icon" href="/blog/favicon.png" type="image/png"><link rel="alternate" type="application/rss+xml" title="ZhangYvJing Blog RSS" href="/blog/rss.xml"><title>Introducing Sakura: A Complete Coding Agent, Yours to Define</title><link rel="stylesheet" href="/blog/_astro/_slug_.D-YXrYwg.css"></head> <body> <div class="shell"> <nav class="site-nav" aria-label="Site navigation"> <a class="brand" href="https://zhangyvjing.com/"> <span class="signal"></span> <span>ZhangYvJing</span> </a> <div class="nav-links"> <a href="https://zhangyvjing.com/works/">Works</a> <a href="/blog/" aria-current="page">Blog</a> <a href="https://github.com/Vist233">GitHub</a> <a href="mailto:zhangyvjing@outlook.com">Contact</a> </div> </nav>  <main class="post-shell"> <aside class="post-aside" aria-label="Article table of contents"> <a class="back-link" href="/blog/">Back to index</a> <nav class="toc"> <p>On this page</p> <a class="depth-2" href="#part-i--why-sakura-exists">Part I — Why Sakura Exists</a><a class="depth-3" href="#1-the-next-step-for-coding-agents">1. The Next Step for Coding Agents</a><a class="depth-3" href="#2-the-problem-is-not-intelligence">2. The Problem Is Not Intelligence</a><a class="depth-3" href="#3-introducing-sakura">3. Introducing Sakura</a><a class="depth-3" href="#4-define-only-the-difference">4. Define Only the Difference</a><a class="depth-3" href="#5-the-agent-is-not-the-machine">5. The Agent Is Not the Machine</a><a class="depth-3" href="#6-a-small-core-explicit-boundaries">6. A Small Core, Explicit Boundaries</a><a class="depth-3" href="#7-plugins-reuse-without-coupling">7. Plugins: Reuse Without Coupling</a><a class="depth-3" href="#8-a-branch-agent-putting-composition-to-work">8. A Branch Agent: Putting Composition to Work</a><a class="depth-2" href="#part-ii--what-we-built-and-what-we-measured">Part II — What We Built and What We Measured</a><a class="depth-3" href="#1-real-usage-not-a-demo">1. Real Usage, Not a Demo</a><a class="depth-3" href="#2-long-running-sessions">2. Long-Running Sessions</a><a class="depth-3" href="#3-tool-review-in-real-work">3. Tool Review in Real Work</a><a class="depth-3" href="#4-sakura-code-and-infinity">4. Sakura Code and Infinity</a><a class="depth-3" href="#5-what-these-results-say">5. What These Results Say</a><a class="depth-3" href="#6-build-what-comes-next">6. Build What Comes Next</a> </nav> </aside> <div class="post-main"> <header class="post-header"> <p class="meta"> 2026-11-18  / Sakura / Coding Agents </p> <h1 class="post-title">Introducing Sakura: A Complete Coding Agent, Yours to Define</h1>  </header> <article class="post-body">  <p><strong>Don’t build another Agent. Build with one.</strong></p>
-<p>一个完整的 Coding Agent，可以直接使用，也可以成为其他软件内部可自由组合的执行能力。</p>
-<p>GitHub：<a href="https://github.com/Vist233/Sakura">Vist233/Sakura</a><br>
-npm：<code>sakura-agent</code></p>
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Introducing Sakura: A Complete Coding Agent, Yours to Define"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap"><link rel="icon" href="/blog/favicon.png" type="image/png"><link rel="alternate" type="application/rss+xml" title="ZhangYvJing Blog RSS" href="/blog/rss.xml"><title>Introducing Sakura: A Complete Coding Agent, Yours to Define</title><link rel="stylesheet" href="/blog/_astro/_slug_.D-YXrYwg.css"></head> <body> <div class="shell"> <nav class="site-nav" aria-label="Site navigation"> <a class="brand" href="https://zhangyvjing.com/"> <span class="signal"></span> <span>ZhangYvJing</span> </a> <div class="nav-links"> <a href="https://zhangyvjing.com/works/">Works</a> <a href="/blog/" aria-current="page">Blog</a> <a href="https://github.com/Vist233">GitHub</a> <a href="mailto:zhangyvjing@outlook.com">Contact</a> </div> </nav>  <main class="post-shell"> <aside class="post-aside" aria-label="Article table of contents"> <a class="back-link" href="/blog/">Back to index</a> <nav class="toc"> <p>On this page</p> <a class="depth-2" href="#part-i--why-sakura-exists">Part I — Why Sakura Exists</a><a class="depth-3" href="#1-the-next-step-for-coding-agents">1. The Next Step for Coding Agents</a><a class="depth-3" href="#2-the-problem-is-not-intelligence">2. The Problem Is Not Intelligence</a><a class="depth-3" href="#3-introducing-sakura">3. Introducing Sakura</a><a class="depth-3" href="#4-define-only-the-difference">4. Define Only the Difference</a><a class="depth-3" href="#5-the-agent-is-not-the-machine">5. The Agent Is Not the Machine</a><a class="depth-3" href="#6-one-problem-one-place">6. One Problem, One Place</a><a class="depth-3" href="#7-plugin-composition-reuse-without-coupling">7. Plugin Composition: Reuse Without Coupling</a><a class="depth-3" href="#8-a-branch-reviewer-composition-in-infinity">8. A Branch Reviewer: Composition in Infinity</a><a class="depth-2" href="#part-ii--what-we-built-and-what-we-measured">Part II — What We Built and What We Measured</a><a class="depth-3" href="#9-real-usage-not-a-demo">9. Real Usage, Not a Demo</a><a class="depth-3" href="#10-long-running-sessions">10. Long-Running Sessions</a><a class="depth-3" href="#11-tool-review-in-real-development-work">11. Tool Review in Real Development Work</a><a class="depth-3" href="#12-sakura-code-and-infinity">12. Sakura Code and Infinity</a><a class="depth-3" href="#13-what-these-results-say">13. What These Results Say</a><a class="depth-3" href="#14-build-what-comes-next">14. Build What Comes Next</a><a class="depth-3" href="#measurement-notes">Measurement Notes</a> </nav> </aside> <div class="post-main"> <header class="post-header"> <p class="meta"> 2026-11-18  / Sakura / Coding Agents </p> <h1 class="post-title">Introducing Sakura: A Complete Coding Agent, Yours to Define</h1>  </header> <article class="post-body">  <p><a href="/blog/introducing-sakura-zh-cn/">简体中文</a></p>
+<p><strong>Don’t build another Agent. Build with one.</strong></p>
+<p>Sakura provides a complete Coding Agent that you can use directly or compose into the execution capabilities of your own software.</p>
+<p>GitHub: <a href="https://github.com/Vist233/Sakura">https://github.com/Vist233/Sakura</a><br>
+npm: <code>sakura-agent</code></p>
 <hr>
 <h2 id="part-i--why-sakura-exists">Part I — Why Sakura Exists</h2>
 <h3 id="1-the-next-step-for-coding-agents">1. The Next Step for Coding Agents</h3>
-<p>过去一年，Coding Agent 改变了我们开发软件的方式。我们可以把一个目标交给 Agent，让它读取项目、修改文件、运行命令，并在不断获得反馈的过程中完成任务。</p>
-<p>当我们开始把这些能力放进自己开发的软件时，需求发生了变化。Coding Agent 不再只是一个供人打开、输入任务、等待结果的独立产品；它也可以成为软件内部的一个执行单元。</p>
-<p>实验平台可以让多个 Agent 探索不同方案，代码审查系统可以从工作 Agent 派生 Reviewer，自动化平台可以让不同 Agent 在本地或远程环境中执行任务。它们的业务目标不同，但都需要模型决策、工具执行、会话记录，以及在长任务中继续运行和恢复的能力。</p>
-<p>真正不同的是：每个应用需要怎样组织和控制这些能力。</p>
-<p><strong>如果一个完整的 Coding Agent 已经存在，为什么开发者还要为每一种应用重新建设一套 Agent 执行系统？</strong></p>
+<p>Over the past year, Coding Agents have changed how we build software. We can give an agent a goal, let it inspect a project, modify files, run commands, and work through feedback until the task is complete.</p>
+<p>When we started putting these capabilities inside software we build ourselves, the requirements changed. A Coding Agent is no longer only a standalone product that someone opens, prompts, and waits for. It can also become an execution unit inside another application.</p>
+<p>An experiment platform may run several agents to explore different approaches. A code review system may create a Reviewer from a working agent. An automation platform may run agents in local or remote environments. Their business goals differ, but they need similar underlying capabilities: model decisions, tool execution, session history, and the ability to keep running or recover during long tasks.</p>
+<p>What differs is how each application needs to organize and control those capabilities.</p>
+<p><strong>If a complete Coding Agent already exists, why should developers rebuild an Agent execution system for every application?</strong></p>
 <h3 id="2-the-problem-is-not-intelligence">2. The Problem Is Not Intelligence</h3>
-<p>以并行实验系统为例。多个 Agent 可以独立探索、修改代码、运行实验，再根据评价结果继续优化。难点不在于让模型多调用几次工具，而在于如何把这些 Agent 组织成一个可靠的软件系统。</p>
-<p>我们可能希望多个 Agent 共享模型预算，却保留独立会话；同时运行很多 Agent，却只允许少量重型任务占用 CPU；让工作 Agent 可以修改文件，而 Reviewer 只能读取；让 Reviewer 继承已有上下文，却不继承工作 Agent 的全部执行权限。甚至还希望 Reviewer 保留模型侧的工具声明和请求前缀，同时在真实执行时受到更严格的限制。</p>
-<p>这些需求要求模型请求、会话历史、工具执行、运行环境和附加策略能够分别控制。</p>
-<p>直接采用完整的终端 Agent，开发者需要适配它已经确定的交互方式、工具体系和运行生命周期；从模型 API 开始构建，则又要重新实现 Agent Loop、工具协议、上下文管理、会话持久化、错误处理和恢复机制。</p>
-<p>前者可能带来不需要的产品约束，后者则重复建设大量通用能力。我们需要一种中间形态：<strong>完整到可以直接工作的 Coding Agent，同时允许开发者定义它的执行方式。</strong></p>
-<p>这就是 Sakura 要解决的问题。</p>
+<p>Consider a parallel experiment system. Multiple agents can independently explore approaches, modify code, run experiments, and continue optimizing from evaluation results. The hard part is not making a model call more tools. It is organizing those agents into a reliable software system.</p>
+<p>We may want agents to share a model budget while keeping separate sessions; run many agents while allowing only a few heavy jobs to consume CPU; let a working agent modify files while a Reviewer can only read them; or let the Reviewer inherit existing context without inheriting all of the working agent’s execution permissions. We may even want the Reviewer to retain model-side tool declarations and request prefixes while enforcing stricter permissions at actual execution time.</p>
+<p>These requirements call for separate control over model requests, session history, tool execution, runtime environments, and additional policies.</p>
+<p>Adopting a complete terminal agent means adapting the host application to its existing interaction model, tool system, and lifecycle. Building from model APIs means implementing the Agent Loop, tool protocol, context management, session persistence, error handling, and recovery all over again.</p>
+<p>The first path may impose product constraints the application does not need. The second repeats a large amount of common infrastructure.</p>
+<p>We need a different shape:</p>
+<p><strong>A Coding Agent that is complete enough to work out of the box, while allowing developers to define how it executes.</strong></p>
+<p>That is the problem Sakura is built to address.</p>
 <h3 id="3-introducing-sakura">3. Introducing Sakura</h3>
-<p>Sakura 是一个 Library-first、可组合、可嵌入的 Coding Agent Harness。它把完整 Agent 所需的通用执行机制组织成可复用的核心，同时允许应用替换、扩展或组合其中的部分能力。</p>
+<p>Sakura is a library-first, composable, embeddable Coding Agent Harness. It organizes the common execution machinery required by a complete agent into reusable components, while allowing applications to replace, extend, or compose parts of that machinery.</p>
 <ul>
-<li><strong>Complete：不从零开始。</strong> 开发者可以直接创建具备模型、工具、会话和执行环境的 Coding Agent，不必先实现 Agent Loop。</li>
-<li><strong>Composable：只改变需要改变的部分。</strong> 模型客户端、会话存储、执行环境和附加策略具有明确边界，可以分别替换或组合。</li>
-<li><strong>Embeddable：Agent 是软件的一部分。</strong> 宿主应用可以创建、配置、观察和关闭 Agent，并决定如何组织多个 Agent、管理资源和连接业务流程。</li>
+<li><strong>Complete: start without rebuilding the basics.</strong> Developers can create a Coding Agent with a model, tools, a session, and an execution environment without first implementing an Agent Loop.</li>
+<li><strong>Composable: change only what needs to change.</strong> Model clients, session storage, execution environments, and additional policies have explicit boundaries and can be replaced or combined independently.</li>
+<li><strong>Embeddable: the agent is part of the software.</strong> A host application can create, configure, observe, and close agents. It decides how to organize multiple agents, manage resources, and connect them to business workflows.</li>
 </ul>
-<p>开发者获得的是一个完整 Agent，但不必接受一个封闭的运行方式。</p>
+<p>Developers get a complete agent without having to accept a closed way of running it.</p>
 <h3 id="4-define-only-the-difference">4. Define Only the Difference</h3>
-<p>创建一个完整的 Coding Agent，可以从几行代码开始：</p>
+<p>Creating a complete Coding Agent can start with a few lines:</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { createAgent } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> "sakura-agent"</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"></span>
+<span class="line"><span style="color:#6A737D">// model is an already configured ModelConfig or LlmClient</span></span>
 <span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> agent</span><span style="color:#F97583"> =</span><span style="color:#F97583"> await</span><span style="color:#B392F0"> createAgent</span><span style="color:#E1E4E8">({ model });</span></span>
+<span class="line"></span>
 <span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> run</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> agent.</span><span style="color:#B392F0">run</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"Fix the failing tests."</span><span style="color:#E1E4E8">);</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#F97583">for</span><span style="color:#F97583"> await</span><span style="color:#E1E4E8"> (</span><span style="color:#F97583">const</span><span style="color:#79B8FF"> event</span><span style="color:#F97583"> of</span><span style="color:#E1E4E8"> run.events) {</span></span>
@@ -38,102 +43,149 @@ npm：<code>sakura-agent</code></p>
 <span class="line"></span>
 <span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> result</span><span style="color:#F97583"> =</span><span style="color:#F97583"> await</span><span style="color:#E1E4E8"> run.result;</span></span>
 <span class="line"><span style="color:#F97583">await</span><span style="color:#E1E4E8"> agent.</span><span style="color:#B392F0">close</span><span style="color:#E1E4E8">();</span></span></code></pre>
-<p>默认 Agent 已经具备常见的 Coding Agent 能力。创建专用 Agent 时，开发者主要定义它与默认 Agent 的差异，而不必重写共同的执行机制。</p>
-<p>例如，只读 Reviewer 可以通过 <code>tools: ["read"]</code> 限定实际可用工具；远程 Agent 可以注入 SSH <code>Environment</code>；需要通过测试才能完成的任务可以设置 <code>goal.verify</code>。变化的是工具、环境或完成条件，不是 Agent Loop。</p>
+<p>The default agent already provides the common capabilities of a Coding Agent. When creating a specialized agent, developers mainly define how it differs from the default rather than rewriting the execution machinery shared by all agents.</p>
+<p>For example, a read-only Reviewer can use <code>tools: ["read"]</code> to limit the tools it receives. A remote agent can inject an SSH <code>Environment</code>. A task that must pass tests before completion can define <code>goal.verify</code>. What changes is the tool set, environment, or completion condition — not the Agent Loop.</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> reviewer</span><span style="color:#F97583"> =</span><span style="color:#F97583"> await</span><span style="color:#B392F0"> createAgent</span><span style="color:#E1E4E8">({</span></span>
 <span class="line"><span style="color:#E1E4E8">  model,</span></span>
 <span class="line"><span style="color:#E1E4E8">  cwd: </span><span style="color:#9ECBFF">"./project"</span><span style="color:#E1E4E8">,</span></span>
 <span class="line"><span style="color:#E1E4E8">  tools: [</span><span style="color:#9ECBFF">"read"</span><span style="color:#E1E4E8">],</span></span>
 <span class="line"><span style="color:#E1E4E8">  rules: [</span><span style="color:#9ECBFF">"Review the code. Do not modify files."</span><span style="color:#E1E4E8">],</span></span>
 <span class="line"><span style="color:#E1E4E8">});</span></span></code></pre>
-<p><strong>我们希望开发者定义的是 Agent 之间的差异，而不是重复建设它们共同需要的部分。</strong></p>
-<h3 id="5-the-agent-is-not-the-machine">5. The Agent Is Not the Machine</h3>
-<p>Agent 的决策、工具执行、会话状态和计算资源，是不同的问题。一个正在等待模型响应的 Agent，不需要持续占用 CPU；一个只负责阅读代码的 Reviewer，也不需要拥有与工作 Agent 相同的执行权限。</p>
-<p>Sakura 通过统一的 <code>Environment</code> 接口访问文件、执行命令和管理进程，当前提供 Local、SSH 和 Docker 实现。相同的 Agent Loop 可以使用不同的执行位置，不必为每种环境重写工具。</p>
-<p>但 <code>Environment</code> 不是资源调度器，也不自动提供操作系统级安全隔离。Agent 数量、容器数量、重型任务并发和模型请求预算，仍由宿主应用按实际需求组织。Sakura 提供可供应用控制的执行边界，而不是替所有应用决定资源策略。</p>
-<p>如果应用有二十个 Agent，却只希望同时运行八个重型实验，就应该限制重型工具的执行并发，而不是把 Agent 数量也限制为八个。<strong>Agent 的数量、执行环境和实际计算并发，不应该被强制绑定。</strong></p>
-<h3 id="6-a-small-core-explicit-boundaries">6. A Small Core, Explicit Boundaries</h3>
-<p>一个 Coding Agent 需要回答三个基础问题：模型如何产生下一步决策；已经发生的事情如何记录、读取和恢复；工具在哪里执行，又如何访问外部世界。Sakura 将它们分别交给 <code>LlmClient</code>、<code>Log</code> 和 <code>Environment</code>，由 Kernel 连接这些能力并运行 Agent Loop。</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>Module</th><th>Hides</th><th>Public contract</th><th align="right">Approx. size</th></tr></thead><tbody><tr><td><code>kernel</code></td><td>Agent Loop、事件、恢复、上下文压缩、目标检查</td><td><code>run(log, input)</code>、events、hooks</td><td align="right">1,650 lines</td></tr><tr><td><code>llm</code></td><td>HTTP、SSE、重试、错误分类、供应商差异</td><td><code>LlmClient.stream(request)</code></td><td align="right">620 lines</td></tr><tr><td><code>env</code></td><td>Local/SSH/Docker、持久 Shell、后台进程、输出限制</td><td><code>Environment</code></td><td align="right">1,420 lines</td></tr><tr><td><code>session</code></td><td>文件日志、分支、fork、文件锁</td><td><code>Log</code></td><td align="right">490 lines</td></tr><tr><td><code>plugins</code></td><td>上下文、工具、恢复、限制、审核、脱敏、子 Agent、Trace 等策略</td><td><code>setup(api)</code>、hooks</td><td align="right">9 plugins; 100–500 each</td></tr><tr><td><code>agent</code></td><td>默认配置与组件装配</td><td><code>createAgent(config)</code></td><td align="right">580 lines</td></tr></tbody></table>
-<p>从整个代码库看，这些模块构成五层：</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>5  Products   Sakura Code · Vesper · Infinity · evals</span></span>
-<span class="line"><span>              使用已有能力构建产品，不向通用核心增加业务机制</span></span>
-<span class="line"><span>4  Assembly   createAgent · corePlugins · compose</span></span>
-<span class="line"><span>              装配配置、模块和插件</span></span>
-<span class="line"><span>3  Plugins    context · tools · resilience · limits · review</span></span>
-<span class="line"><span>              redaction · agents · toolset · trace</span></span>
-<span class="line"><span>              为不同应用增加可选策略</span></span>
-<span class="line"><span>2  Core       kernel · llm · env · session · testing</span></span>
-<span class="line"><span>              提供通用执行机制和稳定接口</span></span>
-<span class="line"><span>1  Data       model records · compatibility · image formats · context window</span></span>
-<span class="line"><span>              定义跨模块使用的数据结构</span></span></code></pre>
-<p>产品层组合已有模块；Assembly 负责装配；Plugins 增加可选策略；Core 提供通用执行机制；Data 定义跨模块的数据契约。产品专用逻辑不应反向进入通用 Kernel。</p>
-<p>这些边界由 <code>scripts/check-boundaries.mjs</code> 在构建检查中执行，而不是只靠约定：Kernel 不依赖其他模块；LLM、Environment、Session 和 Testing 只依赖 Kernel；插件包可以依赖 Kernel、LLM、Environment 和 Session 的公开入口，但不能相互导入，也不能深入引用其他包的内部文件。Agent Assembly 则负责导入并装配这些插件。每个模块还可以独立运行 <code>test:isolated</code>；端到端覆盖规则要求每个模块至少出现在三个场景中，当前测试超过 5,000 项，且不调用真实模型。</p>
-<h3 id="7-plugins-reuse-without-coupling">7. Plugins: Reuse Without Coupling</h3>
-<p>插件之间不直接导入彼此的实现，不代表它们不能复用彼此的能力。Sakura 将源码依赖与运行时组合分开处理。</p>
-<p>Kernel 提供八个 Hook，覆盖上下文构造、模型请求、工具执行前后、回合结束、错误和事件处理。插件通过 Hook 介入执行过程；<code>requires</code> 和 <code>provides</code> 声明所需依赖与提供的能力；<code>compose()</code> 展开 Bundle、去重并确定安装顺序，在运行前检查缺失依赖、重名和循环依赖。</p>
-<p>这使不同插件可以各自实现，再由 Assembly 组合。例如，SubAgent 可以直接复用 AutoReview，而不需要重新实现审核逻辑，也不需要导入 <code>review</code> 插件的源码。</p>
-<p>Sakura 的 SubAgent 默认继承父 Agent 已安装的插件，但会排除 <code>agents</code>、<code>limits</code>、<code>context</code> 和 <code>tools</code>；因此，父 Agent 安装的 <code>review</code> 和 <code>redaction</code> 默认会继续作用于子 Agent。应用还可以通过 <code>notInherited</code> 指定不继承的插件。</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { createAgent, corePlugins, reviewPlugin } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> "sakura-agent"</span><span style="color:#E1E4E8">;</span></span>
+<p>Remote execution only requires replacing the Environment:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">  createAgent,</span></span>
+<span class="line"><span style="color:#E1E4E8">  createSshEnvironment,</span></span>
+<span class="line"><span style="color:#E1E4E8">} </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> "sakura-agent"</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> environment</span><span style="color:#F97583"> =</span><span style="color:#F97583"> await</span><span style="color:#B392F0"> createSshEnvironment</span><span style="color:#E1E4E8">({</span></span>
+<span class="line"><span style="color:#E1E4E8">  host: </span><span style="color:#9ECBFF">"agent@server"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">  cwd: </span><span style="color:#9ECBFF">"/srv/project"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">});</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> agent</span><span style="color:#F97583"> =</span><span style="color:#F97583"> await</span><span style="color:#B392F0"> createAgent</span><span style="color:#E1E4E8">({</span></span>
 <span class="line"><span style="color:#E1E4E8">  model,</span></span>
-<span class="line"><span style="color:#E1E4E8">  plugins: [</span><span style="color:#F97583">...</span><span style="color:#B392F0">corePlugins</span><span style="color:#E1E4E8">(), </span><span style="color:#B392F0">reviewPlugin</span><span style="color:#E1E4E8">({ llm: reviewerModel })],</span></span>
+<span class="line"><span style="color:#E1E4E8">  environment,</span></span>
+<span class="line"><span style="color:#E1E4E8">});</span></span></code></pre>
+<p>A task with a verification condition can define its completion criteria directly:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> fixer</span><span style="color:#F97583"> =</span><span style="color:#F97583"> await</span><span style="color:#B392F0"> createAgent</span><span style="color:#E1E4E8">({</span></span>
+<span class="line"><span style="color:#E1E4E8">  model,</span></span>
+<span class="line"><span style="color:#E1E4E8">  goal: {</span></span>
+<span class="line"><span style="color:#E1E4E8">    objective: </span><span style="color:#9ECBFF">"Make all tests pass"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">    verify: </span><span style="color:#9ECBFF">"npm test"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#E1E4E8">});</span></span></code></pre>
+<p><strong>We want developers to define what makes their agents different, not rebuild what every agent needs.</strong></p>
+<h3 id="5-the-agent-is-not-the-machine">5. The Agent Is Not the Machine</h3>
+<p>An agent’s decisions, tool execution, session state, and compute resources are different concerns. An agent waiting for a model response does not need to keep a CPU busy. A Reviewer that only reads code does not need the same execution permissions as the agent doing the work.</p>
+<p>Sakura uses a common <code>Environment</code> interface to access files, execute commands, and manage processes. Current implementations include Local, SSH, and Docker. The same Agent Loop can use different execution locations without rewriting the tools for each environment.</p>
+<p>But an <code>Environment</code> is not a resource scheduler, and it does not automatically provide operating-system-level isolation. The number of agents, containers, heavy jobs, and model-request budgets are still organized by the host application according to its needs. Sakura provides execution boundaries that an application can control; it does not decide resource policy for every application.</p>
+<p>If an application has twenty agents but wants only eight heavy experiments to run at once, it should limit the concurrency of heavy tool execution rather than limiting the number of agents to eight.</p>
+<p><strong>Agent count, execution environment, and actual compute concurrency should not be forced into one number.</strong></p>
+<h3 id="6-one-problem-one-place">6. One Problem, One Place</h3>
+<p>A Coding Agent needs to answer three basic questions:</p>
+<ul>
+<li>How does the model produce the next decision?</li>
+<li>How are things that have already happened recorded, read, and recovered?</li>
+<li>Where do tools execute, and how do they access the outside world?</li>
+</ul>
+<p>Sakura assigns these questions to three core interfaces:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Interface</th><th>Question</th></tr></thead><tbody><tr><td><code>LlmClient</code></td><td>How does the agent communicate with a model?</td></tr><tr><td><code>Log</code></td><td>What has happened, and how can it be recovered?</td></tr><tr><td><code>Environment</code></td><td>Where do tools execute, and how do they access the outside world?</td></tr></tbody></table>
+<p>The Kernel connects these capabilities, runs the Agent Loop, and maintains core execution semantics. The surrounding modules each own a different responsibility:</p>
+<ul>
+<li><strong>LLM</strong> handles HTTP, SSE, retries, error classification, and provider differences.</li>
+<li><strong>Environment</strong> handles Local, SSH, Docker, persistent Shells, background processes, and output limits.</li>
+<li><strong>Session</strong> handles file logs, session branches, forks, and file locks.</li>
+<li><strong>Plugins</strong> provide optional policies for context, tools, resilience, limits, review, redaction, sub-agents, and tracing.</li>
+<li><strong>Agent Assembly</strong> combines configuration, core modules, and plugins into a runnable agent.</li>
+</ul>
+<p>Across the codebase, these modules form five layers:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>5  Products</span></span>
+<span class="line"><span>   Sakura Code · Infinity · Evaluations</span></span>
+<span class="line"><span>   Build products from existing capabilities without adding product logic to the common core</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>4  Assembly</span></span>
+<span class="line"><span>   createAgent · corePlugins · compose</span></span>
+<span class="line"><span>   Assemble configuration, modules, and plugins</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>3  Plugins</span></span>
+<span class="line"><span>   context · tools · resilience · limits</span></span>
+<span class="line"><span>   review · redaction · agents · toolset · trace</span></span>
+<span class="line"><span>   Add optional policies for different applications</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>2  Core</span></span>
+<span class="line"><span>   kernel · llm · env · session · testing</span></span>
+<span class="line"><span>   Provide common execution mechanisms and stable interfaces</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>1  Data</span></span>
+<span class="line"><span>   model records · compatibility · image formats · context window</span></span>
+<span class="line"><span>   Define data structures shared across modules</span></span></code></pre>
+<p>The Products layer combines existing modules. Assembly connects them. Plugins add optional policies. Core provides common execution mechanisms. Data defines the contracts shared across modules. Product-specific logic should not flow back into the general-purpose Kernel.</p>
+<p>These boundaries are checked by <code>scripts/check-boundaries.mjs</code>, not left to convention:</p>
+<ul>
+<li>The Kernel does not import other modules.</li>
+<li>LLM, Environment, Session, and Testing depend only on the Kernel.</li>
+<li>Plugins may depend on public Core package entry points, but cannot directly import other plugins.</li>
+<li>Modules cannot reach into another package through deep internal paths.</li>
+<li>Agent Assembly imports and composes the modules.</li>
+</ul>
+<p>Interfaces are validated through contract tests. Different Environment implementations follow the same applicable public contract. A new implementation can be used as the same kind of execution environment only when it satisfies that contract.</p>
+<p>The point is not the number of modules. It is that each kind of complexity has a clear owner. A provider changing its response protocol should not force changes to file tools. Adding a new execution environment should not require rewriting the model loop. Adding an application-wide budget controller should not require the Kernel to understand the application’s business rules.</p>
+<h3 id="7-plugin-composition-reuse-without-coupling">7. Plugin Composition: Reuse Without Coupling</h3>
+<p>The fact that plugins do not directly import one another’s implementations does not mean they cannot reuse one another’s capabilities. Sakura separates source-level dependencies from runtime composition.</p>
+<p>The Kernel provides eight Hooks covering context construction, model requests, tool execution before and after, turn completion, errors, and events. Plugins use Hooks to participate in execution. <code>requires</code> and <code>provides</code> declare dependencies and capabilities. <code>compose()</code> expands bundles, deduplicates plugins, determines installation order, and checks for missing requirements, duplicate names, and dependency cycles before execution begins.</p>
+<p>The same mechanism supports plugin reuse in SubAgents.</p>
+<p>When a parent agent installs <code>reviewPlugin</code> and enables sub-agents with <code>subAgents: {}</code>, Agent Assembly passes the parent’s inherited plugins to its child agents. By default, <code>review</code> and <code>redaction</code> are inherited. The default exclusions are <code>agents</code>, <code>limits</code>, <code>context</code>, and <code>tools</code>. Applications can change the inheritance set through <code>notInherited</code>, using plugin names.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">  createAgent,</span></span>
+<span class="line"><span style="color:#E1E4E8">  corePlugins,</span></span>
+<span class="line"><span style="color:#E1E4E8">  reviewPlugin,</span></span>
+<span class="line"><span style="color:#E1E4E8">} </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> "sakura-agent"</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> agent</span><span style="color:#F97583"> =</span><span style="color:#F97583"> await</span><span style="color:#B392F0"> createAgent</span><span style="color:#E1E4E8">({</span></span>
+<span class="line"><span style="color:#E1E4E8">  model,</span></span>
+<span class="line"><span style="color:#E1E4E8">  plugins: [</span></span>
+<span class="line"><span style="color:#F97583">    ...</span><span style="color:#B392F0">corePlugins</span><span style="color:#E1E4E8">(),</span></span>
+<span class="line"><span style="color:#B392F0">    reviewPlugin</span><span style="color:#E1E4E8">({ llm: reviewerModel }),</span></span>
+<span class="line"><span style="color:#E1E4E8">  ],</span></span>
 <span class="line"><span style="color:#E1E4E8">  subAgents: {},</span></span>
 <span class="line"><span style="color:#E1E4E8">});</span></span></code></pre>
-<p>这里，<code>agents</code> 负责创建和管理子 Agent，<code>review</code> 负责审核工具调用。两者独立实现，由 Agent Assembly 将它们组合起来。模块独立不意味着能力孤立；它意味着复用不必以源码耦合为代价。</p>
-<p>同样，应用可以在 <code>LlmClient</code> 外包装共享预算控制器，也可以在 <code>tool.run</code> 阶段限制重型命令并发。请求预算、权限检查、上下文处理、资源限制和 Trace 可以放在各自的执行边界，不必为每个新需求向 Kernel 添加专用开关。</p>
-<h3 id="8-a-branch-agent-putting-composition-to-work">8. A Branch Agent: Putting Composition to Work</h3>
-<p>Infinity 中有一个更复杂的需求：从正在工作的 Agent 派生一个独立 Reviewer。它需要继承已有会话历史，保持需要复用的模型请求特征，却拥有不同的实际执行权限；完成检查后，再把建议交还给主 Agent。</p>
-<p>从头创建 Reviewer，会重复读取项目和任务；直接复用主 Agent，又会继承不需要的写入和 Shell 权限。Infinity 因此将这些要求拆开处理：通过 <code>fork</code> 继承会话历史；创建独立 Agent；用执行前 Guard 限制实际操作；用模型客户端包装保留需要复用的请求特征；再通过独立结果通道返回建议。</p>
-<p>核心装配可以概括为：</p>
+<p>Here, <code>agents</code> creates and manages child agents, while <code>review</code> checks tool calls. They are implemented independently and composed by Agent Assembly.</p>
+<p>A SubAgent can therefore reuse AutoReview without reimplementing the review logic and without making the <code>agents</code> plugin import the source code of the <code>review</code> plugin.</p>
+<p><strong>Independent modules do not mean isolated capabilities. They mean reuse does not require source-level coupling.</strong></p>
+<p>An application can also wrap <code>LlmClient</code> with a shared budget controller or limit heavy-command concurrency at <code>tool.run</code>. Request budgets, permission checks, context processing, resource limits, and tracing can live at their respective execution boundaries instead of adding a dedicated Kernel switch for every new requirement.</p>
+<h3 id="8-a-branch-reviewer-composition-in-infinity">8. A Branch Reviewer: Composition in Infinity</h3>
+<p>Infinity has a more complex requirement: create an independent Reviewer from an agent that is already working. The Reviewer needs to inherit the existing session history and preserve selected model-request characteristics, while having different actual execution permissions. When the review is complete, it must return its advice to the main agent.</p>
+<p>Creating the Reviewer from scratch would require rereading the project and task. Reusing the main agent directly would give it write and Shell permissions it does not need.</p>
+<p>Infinity separates these requirements:</p>
+<ol>
+<li>Fork the existing session history.</li>
+<li>Create an independent Agent instance for the Reviewer.</li>
+<li>Use an execution-time Guard to limit what it can actually do.</li>
+<li>Wrap the model client to preserve request characteristics that need to be reused.</li>
+<li>Return the result through a separate advice channel.</li>
+</ol>
+<p>The core assembly can be summarized as:</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#B392F0">fork</span><span style="color:#E1E4E8">: (</span><span style="color:#FFAB70">path</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=></span><span style="color:#E1E4E8"> live.</span><span style="color:#B392F0">fork</span><span style="color:#E1E4E8">(path),</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#B392F0">openReviewer</span><span style="color:#E1E4E8">: (</span><span style="color:#FFAB70">sessionFile</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">guard</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">wrapClient</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=></span></span>
@@ -144,13 +196,15 @@ npm：<code>sakura-agent</code></p>
 <span class="line"><span style="color:#E1E4E8">  ),</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#B392F0">advise</span><span style="color:#E1E4E8">: (</span><span style="color:#FFAB70">text</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=></span><span style="color:#E1E4E8"> advice.</span><span style="color:#B392F0">deliver</span><span style="color:#E1E4E8">(text),</span></span></code></pre>
-<p>Reviewer 可以保留模型侧的工具声明，但这不代表它拥有相应的实际执行权限；Guard 会在工具真正运行前检查并拒绝不允许的操作。Reviewer 使用独立会话，不覆盖主 Agent 的历史，最终只把审查建议交回主 Agent，由主 Agent 决定是否采纳。</p>
-<p>这里的 <code>build</code>、审核调度、结构化结果、生命周期和建议处理属于 Infinity；Sakura 提供可复用的会话、模型客户端、插件和执行边界。这个案例说明，应用可以重新组合完整 Agent 的能力，而不必重新实现一套 Agent Loop。</p>
+<p>The Reviewer can retain model-side tool declarations without gaining the corresponding execution permissions. The Guard checks and rejects disallowed operations before the tools actually run.</p>
+<p>The Reviewer uses an independent session and does not overwrite the main agent’s history. It returns its review advice to the main agent, which decides whether to accept it.</p>
+<p>The <code>build</code> function, review orchestration, structured results, lifecycle management, and advice delivery belong to Infinity. Sakura provides the reusable sessions, model client, plugins, and execution boundaries.</p>
+<p>This case shows how an application can recombine the capabilities of a complete agent without implementing another Agent Loop.</p>
 <hr>
 <h2 id="part-ii--what-we-built-and-what-we-measured">Part II — What We Built and What We Measured</h2>
-<p>前半部分说明 Sakura 为什么存在，以及它如何让 Agent 的执行能力被拆分和重新组合。下面的数据来自 Sakura Code、Sakura 的真实运行记录和 Infinity 的独立实验，分别代表不同层面的证据，不应混成一个 Benchmark。</p>
-<h3 id="1-real-usage-not-a-demo">1. Real Usage, Not a Demo</h3>
-<p>截至 <strong>2026-11-18 22:28</strong>，本机聚合了 168 个真实会话，覆盖 11 月 9 日至 11 月 18 日。数据包含正在运行的会话，仍会缓慢增长。</p>
+<p>The first part explains why Sakura exists and how it lets agent execution capabilities be separated and recombined. The following data comes from Sakura Code, real Sakura usage records, and separate Infinity experiments. They represent different kinds of evidence and should not be combined into one benchmark.</p>
+<h3 id="9-real-usage-not-a-demo">9. Real Usage, Not a Demo</h3>
+<p>As of <strong>2026-11-18 22:28</strong>, the local aggregation contained 168 real sessions, spanning November 9 through November 18, with activity on nine days. The snapshot includes the session that was still running at the time, so the numbers may continue to grow.</p>
 
 
 
@@ -192,10 +246,12 @@ npm：<code>sakura-agent</code></p>
 
 
 
-<table><thead><tr><th>Dimension</th><th align="right">Snapshot</th></tr></thead><tbody><tr><td>Sessions</td><td align="right"><strong>168</strong> across 9 active days</td></tr><tr><td>Wall-clock time</td><td align="right"><strong>167 hours</strong>; 89 hours of active work, the rest waiting or idle</td></tr><tr><td>Model requests</td><td align="right"><strong>7,713</strong> across 1,154 user messages, about 7 requests per message</td></tr><tr><td>Tool calls</td><td align="right"><strong>7,150</strong>: Bash 6,215 · Write 476 · Read 220 · Edit 182 · other 57</td></tr><tr><td>Tokens</td><td align="right">19.2M input · 6.2M output · 1.38B provider cache reads</td></tr><tr><td>Aggregate cache hit</td><td align="right"><strong>98.63%</strong>; highest single long run 99.3%</td></tr><tr><td>Context and goals</td><td align="right">101 compactions · 514 goal checks</td></tr><tr><td>Main model routes</td><td align="right">OpenCode / DeepSeek v4.1 Flash: 115 sessions · CommandCode / DeepSeek v4.1 Flash: 52 sessions</td></tr></tbody></table>
-<p>按缓存读取量除以缓存读取量与未命中输入量之和计算，约为 <code>1.38B / (1.38B + 19.2M) = 98.63%</code>。它反映这批长会话中的请求前缀复用情况，受模型供应商缓存策略和具体任务影响，不应直接等同于 Sakura 单独带来的成本节省。</p>
-<h3 id="2-long-running-sessions">2. Long-Running Sessions</h3>
-<p>这 168 个会话中，有多次持续数小时的真实开发任务。以下列出五个具有代表性的长会话：</p>
+<table><thead><tr><th>Metric</th><th align="right">Snapshot</th></tr></thead><tbody><tr><td>Sessions</td><td align="right"><strong>168</strong> across 9 active days</td></tr><tr><td>Wall-clock time</td><td align="right"><strong>167 hours</strong>, including 89 hours of active work; the rest was waiting or idle</td></tr><tr><td>Model rounds</td><td align="right"><strong>7,713</strong>, across 1,154 user messages — about 7 rounds per message</td></tr><tr><td>Tool calls</td><td align="right"><strong>7,150</strong>: Bash 6,215 · Write 476 · Read 220 · Edit 182 · Other 57</td></tr><tr><td>Tokens</td><td align="right">19.2M input · 6.2M output · 1.38B provider cache reads</td></tr><tr><td>Aggregate cache hit rate</td><td align="right"><strong>98.63%</strong>; the highest single long run reached 99.3%</td></tr><tr><td>Context and goals</td><td align="right">101 context compactions · 514 goal checks</td></tr><tr><td>Main model routes</td><td align="right">OpenCode / DeepSeek v4.1 Flash: 115 sessions · CommandCode / DeepSeek v4.1 Flash: 52 sessions</td></tr></tbody></table>
+<p>The aggregate cache-hit rate is calculated as provider cache reads divided by cache reads plus uncached input:</p>
+<p><code>1.38B / (1.38B + 19.2M) = 98.63%</code></p>
+<p>This reflects request-prefix reuse in these long sessions. It depends on provider caching policies and the task itself; it should not be presented as cost savings independently created by Sakura.</p>
+<h3 id="10-long-running-sessions">10. Long-Running Sessions</h3>
+<p>The 168 sessions include several real development tasks that ran for hours. Five representative sessions are listed below:</p>
 
 
 
@@ -249,11 +305,12 @@ npm：<code>sakura-agent</code></p>
 
 
 
-<table><thead><tr><th>Session</th><th align="right">Wall / active</th><th align="right">Model requests</th><th align="right">Tool calls</th><th align="right">Reviews / denials</th><th>Work</th></tr></thead><tbody><tr><td><code>a7820a3f</code></td><td align="right"><strong>43.7 h / 36.3 h</strong></td><td align="right">2,580</td><td align="right">2,438</td><td align="right">617 / 2</td><td>Lean 数学任务；前 20.8 小时无人值守</td></tr><tr><td><code>89540059</code></td><td align="right">19.5 h / 11.7 h</td><td align="right">1,153</td><td align="right">1,160</td><td align="right">1,160 / 9</td><td>三本桌面手册端到端验收、IMAP 模拟</td></tr><tr><td><code>3547c6bc</code></td><td align="right">19.2 h / 8.7 h</td><td align="right">1,108</td><td align="right">782</td><td align="right">782 / 5</td><td>中药处方模型优化，342 次 goal check</td></tr><tr><td><code>4966e09c</code></td><td align="right">16.8 h / 5.4 h</td><td align="right">374</td><td align="right">406</td><td align="right">404 / 12</td><td>远端服务器上的 herb pipeline</td></tr><tr><td><code>6c20ed20</code></td><td align="right">11.6 h / 11.6 h</td><td align="right">932</td><td align="right">647</td><td align="right">647 / 10</td><td>Infinity-capacity 实验编排</td></tr></tbody></table>
-<p>README 中的 20.8 小时运行记录也已重新核对：<code>a7820a3f</code> 前 20.8 小时实际完成 <strong>1,822 次模型请求、1,796 次工具调用，0 次审核拒绝</strong>；整条会话最终持续 43.7 小时。原先“之后 15 小时 445 次审核”的描述应修正为 <strong>16.7 小时 445 次审核</strong>；整条会话最终记录 617 次审核、2 次拒绝。</p>
-<p>这批记录还显示，长任务并不依赖一直保留一个未压缩的上下文：101 次上下文压缩后，任务继续执行；最长会话达到 43.7 小时、2,580 轮模型请求。</p>
-<h3 id="3-tool-review-in-real-work">3. Tool Review in Real Work</h3>
-<p>168 个会话累计产生 <strong>5,314 次工具调用审核</strong>：5,239 次放行、75 次拒绝，拒绝率 <strong>1.41%</strong>。逐条复核后，75 次拒绝中有 42 次属于真实风险，其余是运行取消、误拦或人工/缓存记录。</p>
+<table><thead><tr><th>Session</th><th align="right">Wall / active time</th><th align="right">Model rounds</th><th align="right">Tool calls</th><th align="right">Reviews / denials</th><th>Work</th></tr></thead><tbody><tr><td><code>a7820a3f</code></td><td align="right"><strong>43.7 h / 36.3 h</strong></td><td align="right">2,580</td><td align="right">2,438</td><td align="right">617 / 2</td><td>Lean mathematics task; first 20.8 hours unattended</td></tr><tr><td><code>89540059</code></td><td align="right">19.5 h / 11.7 h</td><td align="right">1,153</td><td align="right">1,160</td><td align="right">1,160 / 9</td><td>End-to-end acceptance of three desktop manuals and IMAP simulation</td></tr><tr><td><code>3547c6bc</code></td><td align="right">19.2 h / 8.7 h</td><td align="right">1,108</td><td align="right">782</td><td align="right">782 / 5</td><td>Traditional Chinese medicine prescription model optimization; 342 goal checks</td></tr><tr><td><code>4966e09c</code></td><td align="right">16.8 h / 5.4 h</td><td align="right">374</td><td align="right">406</td><td align="right">404 / 12</td><td>Herb pipeline on a remote server</td></tr><tr><td><code>6c20ed20</code></td><td align="right">11.6 h / 11.6 h</td><td align="right">932</td><td align="right">647</td><td align="right">647 / 10</td><td>Infinity capacity experiment orchestration</td></tr></tbody></table>
+<p>The previously reported 20.8-hour run has also been rechecked. During the first 20.8 hours of <code>a7820a3f</code>, the agent completed <strong>1,822 model rounds and 1,796 tool calls, with zero review denials</strong>. The next 16.7 hours of the same session recorded 445 reviews. The full session eventually lasted 43.7 hours, with 2,580 model rounds, 2,438 tool calls, and 617 reviews, including two denials.</p>
+<p>These records also show that long tasks do not depend on keeping an uncompressed context indefinitely. The work continued after 101 context compactions. The longest session reached 43.7 hours and 2,580 model rounds.</p>
+<h3 id="11-tool-review-in-real-development-work">11. Tool Review in Real Development Work</h3>
+<p>Across the tracked usage, there were <strong>5,314 tool-review decisions</strong>: 5,239 allowed and 75 denied, for a denial rate of <strong>1.41%</strong>.</p>
+<p>After reviewing the records individually, 42 of the 75 denials were classified as genuine risks. The rest were run cancellations, hard-rule false positives, or human / cache records.</p>
 
 
 
@@ -319,24 +376,52 @@ npm：<code>sakura-agent</code></p>
 
 
 
-<table><thead><tr><th>Review outcome</th><th align="right">Count</th><th>Meaning</th></tr></thead><tbody><tr><td>Destructive deletion or overwrite</td><td align="right"><strong>16</strong></td><td>破坏性删除、覆盖</td></tr><tr><td>Violating explicit instructions / self-expansion</td><td align="right"><strong>8</strong></td><td>违背用户明令或自行扩权</td></tr><tr><td>Credential access or disclosure</td><td align="right"><strong>6</strong></td><td>凭据读取或外传</td></tr><tr><td>Privilege escalation / unauthorized host</td><td align="right"><strong>5</strong></td><td>越权提权、未授权主机</td></tr><tr><td>Download-and-execute</td><td align="right"><strong>4</strong></td><td>下载后直接执行未审代码</td></tr><tr><td>Out-of-scope file access</td><td align="right"><strong>3</strong></td><td>项目外或系统目录读写</td></tr><tr><td><strong>Real risks intercepted</strong></td><td align="right"><strong>42</strong></td><td><strong>真实风险拦截</strong></td></tr><tr><td>Run cancelled during review</td><td align="right">18</td><td>技术性拒绝，不代表风险判断</td></tr><tr><td>Hard-rule false positives</td><td align="right">13</td><td>误拦，包括 <code>curl ... | python3</code> 和 heredoc</td></tr><tr><td>Human / cache</td><td align="right">2</td><td>人工拒绝或缓存重复</td></tr><tr><td><strong>All denials</strong></td><td align="right"><strong>75</strong></td><td><strong>全部拒绝</strong></td></tr></tbody></table>
-<p>审核由多层决策组成：约 <strong>22%</strong> 由硬规则决策，共 <strong>1,144 次</strong>，其中 <strong>815 次在 0 ms 内完成</strong>；独立审核模型处理 <strong>4,157 次</strong>，决策延迟 p50 为 <strong>2.7 秒</strong>；另有 6 次人工决策和 7 次缓存决策。6 次人工决策全部来自 ACP 授权测试会话，长跑任务没有人工 defer。审核模型累计使用约 3.7M 输入 Token 和 422K 输出 Token。</p>
-<p>因此，审核并不是简单判断命令看起来是否危险。它还要判断操作是否符合用户明确给出的授权范围。它不能证明没有漏拦，但这 5,314 条真实记录表明，审核机制已经在实际工具调用中运行，并识别出删除、越权、凭据和下载执行等具体风险。审核作为插件按需启用，不是每个 Agent 都必须承担的固定成本。</p>
-<h3 id="4-sakura-code-and-infinity">4. Sakura Code and Infinity</h3>
-<p><strong>Sakura Code 验证完整 Agent 能否完成实际开发任务。</strong> 在 Terminal-Bench 2.1 本地第一轮评测中，Sakura Code 完成 <strong>75/88，Pass@1 为 85.23%</strong>。这是 Sakura Code 的成绩，不是 Sakura 框架本身的 Benchmark，也不是多轮取最好或官方榜单成绩。</p>
-<p><strong>Infinity 验证 Agent 能否成为更大系统中的可组合执行单元。</strong> 在一组持续约 4.5 小时的 16 vCPU 容量实验中，16 个 Agent 配合 8 个重型执行槽位运行。单纯提高 Agent 并发时，<code>load/core</code> 从 1.63 升至 1.97，评分变化跨度约为 0.0022，没有带来稳定的质量提升；将重型任务限制在 8 个槽位后，<code>load/core</code> 降至约 1.02，CPU busy 约为 0.96。首个评分结果从 29.3 分钟提前到 16.5 分钟，缩短约 <strong>43.7%</strong>。这组任务的 RTX 4090 利用率接近 0%，主要瓶颈是 CPU 工作负载。</p>
-<p>在 8 个槽位的探索中，6 个 Agent 达到 0.319，另外 2 个停在 0.251；两轮中停滞的成员不同，瓶颈更可能在探索方法，而不是算力。槽位利用率从 86% 提高到 97%，代价是排队总时长从 1.8 小时增加到 12.7 小时。另一组定向探索使用约 43% 的 Token，得到最好分数的 98.7%，但达到 0.32 的时间从 39 分钟延长到 74 分钟。另一次满负载记录中，6,004 次请求没有出现 throttle、丢请求或崩溃，<code>load1</code> 峰值为 18.4（16 核机器的 1.15 倍），内存占用达到 91.6%；这些结果共同说明，资源控制需要在吞吐、等待时间和结果质量之间取舍，而不是简单追求更多 Agent。</p>
-<h3 id="5-what-these-results-say">5. What These Results Say</h3>
-<p>这些数字回答的是不同问题：Sakura Code 的 75/88 说明基于 Sakura 可以构建具备实际任务能力的 Coding Agent；168 个会话和多次长跑说明它已用于持续开发工作；5,314 次审核说明执行策略可以进入真实工具路径；Infinity 的实验则说明 Agent 并发、重型计算并发和业务调度可以由宿主应用分别组织。</p>
-<p>它们不是一组用来宣称全面领先的综合跑分，也不能证明所有环境下都具有相同表现。它们证明的是：Sakura 的架构已经被用于构建完整 Agent、长时间执行和多 Agent 应用，而不是停留在接口设计或单次演示。</p>
-<h3 id="6-build-what-comes-next">6. Build What Comes Next</h3>
-<p>模型会继续变强，但更强的模型不会消除软件对权限、资源、状态和执行边界的要求。只读 Reviewer 仍然不应该拥有部署权限；一百个 Agent 仍然不能无限制地占用同一台机器；已经发生的外部副作用，也不会因为模型更聪明就自动撤销。</p>
-<p>我们不希望 Sakura 的长期价值建立在弥补某一代模型的缺陷之上。我们希望它成为模型能力与真实软件系统之间稳定、可组合的执行基础。</p>
-<p>Sakura Code 和 Infinity 是使用 Sakura 构建的两个不同产品：一个验证完整 Coding Agent 的实际能力，另一个验证这些能力能否被重新组合，成为更复杂系统的一部分。</p>
-<p>我们希望开发者能够用 Sakura 构建更多我们没有预先想到的 Agent。一个真正具有组合能力的框架，不应该只能构建框架作者已经设计好的产品。</p>
+<table><thead><tr><th>Denial category</th><th align="right">Count</th><th>Description</th></tr></thead><tbody><tr><td>Destructive deletion or overwrite</td><td align="right"><strong>16</strong></td><td>Deleting or overwriting important files, directories, and results</td></tr><tr><td>Violating explicit instructions or self-expansion</td><td align="right"><strong>8</strong></td><td>Acting beyond the user’s explicit authorization</td></tr><tr><td>Credential access or disclosure</td><td align="right"><strong>6</strong></td><td>Reading or exposing credentials</td></tr><tr><td>Privilege escalation or unauthorized host access</td><td align="right"><strong>5</strong></td><td>Expanding privileges or accessing an unauthorized host</td></tr><tr><td>Download-and-execute</td><td align="right"><strong>4</strong></td><td>Directly executing downloaded, unreviewed code</td></tr><tr><td>Out-of-scope file access</td><td align="right"><strong>3</strong></td><td>Reading or writing outside the project or into system directories</td></tr><tr><td><strong>Real risks intercepted</strong></td><td align="right"><strong>42</strong></td><td><strong>Classified after individual review</strong></td></tr><tr><td>Run cancelled during review</td><td align="right">18</td><td>A technical cancellation, not a risk judgment</td></tr><tr><td>Hard-rule false positives</td><td align="right">13</td><td>Including curl-to-Python pipe execution and heredoc cases</td></tr><tr><td>Human / cache records</td><td align="right">2</td><td>A human denial or cached duplicate</td></tr><tr><td><strong>All denials</strong></td><td align="right"><strong>75</strong></td><td><strong>Total denials</strong></td></tr></tbody></table>
+<p>Review decisions came from several layers:</p>
+<ul>
+<li>Hard rules made <strong>1,144 decisions</strong>, about 21.5% of the total. Of these, 815 were decided in 0 ms.</li>
+<li>The independent reviewer model made <strong>4,157 decisions</strong>, with p50 latency of <strong>2.7 seconds</strong>, p90 of 5.2 seconds, and p99 of 11.4 seconds.</li>
+<li>There were 6 human decisions and 7 cached decisions.</li>
+</ul>
+<p>The reviewer model used approximately 3.7M input tokens and 422K output tokens. All six human decisions came from the ACP authorization test session <code>ed743255</code>; the long-running development tasks used automated review decisions.</p>
+<p>One case illustrates what the review mechanism checks. Session <code>3547c6bc</code> attempted to execute <code>./clean_results.sh --apply</code>. The review denied the operation because the agent had only repeated “user approval pending” during a goal check. That statement was not user authorization. The command would have deleted 11 <code>.npy</code> files totaling about 365 MB.</p>
+<p>Review is therefore not just a judgment about whether a command looks dangerous. It also checks whether the operation falls within the user’s explicit authorization. This does not prove that no risk was missed. But these 5,314 records show that review was active in real tool execution and identified concrete risks involving deletion, privilege expansion, credentials, and downloaded code.</p>
+<p>Review is an optional plugin, not a fixed cost every agent must incur.</p>
+<h3 id="12-sakura-code-and-infinity">12. Sakura Code and Infinity</h3>
+<p><strong>Sakura Code tests whether a complete agent can perform real development tasks.</strong></p>
+<p>In a local first-round run of Terminal-Bench 2.1, Sakura Code completed <strong>75 of 88 tasks, with a Pass@1 result of 85.23%</strong>. This is a Sakura Code result, not a benchmark score for the Sakura framework. It is not a multi-run best result or an official leaderboard result.</p>
+<p><strong>Infinity tests whether agent capabilities can become composable execution units inside a larger system.</strong></p>
+<p>In a capacity experiment lasting about 4.5 hours on a 16-vCPU machine, the system used 16 agents and limited heavy jobs to 8 execution slots. Increasing agent concurrency by itself raised <code>load/core</code> from 1.63 to 1.97. The score varied by about 0.0022, without a stable quality improvement. Limiting heavy jobs to 8 slots brought <code>load/core</code> down to about 1.02, with CPU busy around 0.96. The time to the first scored result fell from 29.3 minutes to 16.5 minutes, a reduction of about <strong>43.7%</strong>. RTX 4090 utilization in this workload was close to zero; the main bottleneck was CPU work.</p>
+<p>In the 8-slot exploration, six agents reached 0.319 while two remained at 0.251. The stalled members differed between two rounds, suggesting that the bottleneck was more likely the exploration method than compute capacity. Slot utilization increased from 86% to 97%, at the cost of increasing total queue time from 1.8 hours to 12.7 hours.</p>
+<p>A separate targeted exploration used about 43% of the tokens and reached 98.7% of the best score, but the time to reach 0.32 increased from 39 minutes to 74 minutes. In another full-load record, 6,004 requests completed without throttling, dropped requests, or crashes. Peak <code>load1</code> was 18.4, or 1.15 times the core count on a 16-core machine, and memory usage reached 91.6%.</p>
+<p>Together, these results show that resource control requires trade-offs among throughput, waiting time, and result quality. Simply increasing the number of agents is not a universal solution.</p>
+<p>In the formal platform submission for the course task, Infinity ultimately scored <strong>0.1888</strong>, ranked first on the leaderboard, and improved <strong>8.34%</strong> over the platform baseline. Internal experiment scores did not transfer directly to the platform, so the reported result here is the actual platform score rather than the best internal result.</p>
+<h3 id="13-what-these-results-say">13. What These Results Say</h3>
+<p>These numbers answer different questions.</p>
+<p>Sakura Code’s 75/88 result shows that a capable Coding Agent can be built on Sakura. The 168 sessions and long-running tasks show that it has been used for sustained development work. The 5,314 review decisions show that execution policies can participate in real tool calls. Infinity’s experiments show that agent concurrency, heavy-compute concurrency, and application scheduling can be organized separately by the host application.</p>
+<p>They are not a single composite score claiming that Sakura is universally better, and they do not guarantee the same behavior in every environment.</p>
+<p>They show that Sakura’s architecture has been used to build a complete agent, run long tasks, and support multi-agent applications. It is not limited to interface design or a one-shot demonstration.</p>
+<h3 id="14-build-what-comes-next">14. Build What Comes Next</h3>
+<p>Models will continue to improve, but more capable models will not remove software’s need for permissions, resources, state, and execution boundaries.</p>
+<p>A read-only Reviewer still should not have deployment permissions. One hundred agents still cannot consume a machine without limits. An external side effect that has already happened does not become reversible because the model is smarter.</p>
+<p>We do not want Sakura’s long-term value to depend on compensating for the weaknesses of one generation of models. We want it to provide a stable, composable execution foundation between model capabilities and real software systems.</p>
+<p>Sakura Code and Infinity are two different products built with Sakura. One validates the practical capability of a complete Coding Agent. The other validates whether those capabilities can be recombined into a more complex system.</p>
+<p>We want developers to use Sakura to build agents we have not thought of in advance.</p>
+<p>A framework with real composability should not be limited to the products its authors have already designed.</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> sakura-agent</span></span></code></pre>
 <p>TypeScript · MIT License · Node.js 22.18+</p>
-<p>GitHub：<a href="https://github.com/Vist233/Sakura">Vist233/Sakura</a></p>
-<p><strong>Sakura — A complete Coding Agent. Yours to define.</strong></p>  </article> <nav class="post-switcher" aria-label="Article navigation"> <div> <span>Previous</span> <a href="/blog/prompt-to-engineering-system/">从 Prompt 到工程系统：LLM 何时必须被工程化</a> </div> <div> <span>Next</span> <em>Latest article</em> </div> </nav> </div> </main>  <footer class="site-footer"> <span>ZhangYvJing / Blog</span> <span class="footer-links"> <a href="/blog/rss.xml">RSS</a>
+<p>GitHub: <a href="https://github.com/Vist233/Sakura">https://github.com/Vist233/Sakura</a></p>
+<p><strong>Sakura — A complete Coding Agent, yours to define.</strong></p>
+<hr>
+<h3 id="measurement-notes">Measurement Notes</h3>
+<ul>
+<li>Snapshot time: 2026-11-18 22:28, including sessions that were still running at the time.</li>
+<li>Model rounds: assistant messages that contained <code>usage</code>.</li>
+<li>Tool calls: <code>tool_call</code> blocks in assistant messages.</li>
+<li>Active time: wall-clock duration minus gaps longer than 10 minutes.</li>
+<li>Review records exist from 2026-11-10 18:34 onward. Sessions on November 9 therefore have no review-event records.</li>
+<li>Provider cache reads are cumulative across requests. They should not be described as total context size or cost savings independently created by Sakura.</li>
+<li>The denial total includes cancellations and false positives. Do not describe all 75 denials as successful interceptions of dangerous operations.</li>
+</ul>  </article> <nav class="post-switcher" aria-label="Article navigation"> <div> <span>Previous</span> <a href="/blog/prompt-to-engineering-system/">从 Prompt 到工程系统：LLM 何时必须被工程化</a> </div> <div> <span>Next</span> <a href="/blog/introducing-sakura-zh-cn/">Sakura：一个可由你定义的完整编程 Agent</a> </div> </nav> </div> </main>  <footer class="site-footer"> <span>ZhangYvJing / Blog</span> <span class="footer-links"> <a href="/blog/rss.xml">RSS</a>
 ·
 <a href="https://x.com/zhangyvjing233">X</a> </span> </footer> </div> </body></html>
