@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Introducing Sakura: A Complete Coding Agent, Yours to Define"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap"><link rel="icon" href="/blog/favicon.png" type="image/png"><link rel="alternate" type="application/rss+xml" title="ZhangYvJing Blog RSS" href="/blog/rss.xml"><title>Introducing Sakura: A Complete Coding Agent, Yours to Define</title><link rel="stylesheet" href="/blog/_astro/_slug_.D-YXrYwg.css"></head> <body> <div class="shell"> <nav class="site-nav" aria-label="Site navigation"> <a class="brand" href="https://zhangyvjing.com/"> <span class="signal"></span> <span>ZhangYvJing</span> </a> <div class="nav-links"> <a href="https://zhangyvjing.com/works/">Works</a> <a href="/blog/" aria-current="page">Blog</a> <a href="https://github.com/Vist233">GitHub</a> <a href="mailto:zhangyvjing@outlook.com">Contact</a> </div> </nav>  <main class="post-shell"> <aside class="post-aside" aria-label="Article table of contents"> <a class="back-link" href="/blog/">Back to index</a> <nav class="toc"> <p>On this page</p> <a class="depth-2" href="#part-i--why-sakura-exists">Part I — Why Sakura Exists</a><a class="depth-3" href="#1-the-next-step-for-coding-agents">1. The Next Step for Coding Agents</a><a class="depth-3" href="#2-the-problem-is-not-intelligence">2. The Problem Is Not Intelligence</a><a class="depth-3" href="#3-introducing-sakura">3. Introducing Sakura</a><a class="depth-3" href="#4-define-only-the-difference">4. Define Only the Difference</a><a class="depth-3" href="#5-the-agent-is-not-the-machine">5. The Agent Is Not the Machine</a><a class="depth-3" href="#6-one-problem-one-place">6. One Problem, One Place</a><a class="depth-3" href="#7-plugin-composition-reuse-without-coupling">7. Plugin Composition: Reuse Without Coupling</a><a class="depth-3" href="#8-a-branch-reviewer-composition-in-infinity">8. A Branch Reviewer: Composition in Infinity</a><a class="depth-2" href="#part-ii--what-we-built-and-what-we-measured">Part II — What We Built and What We Measured</a><a class="depth-3" href="#9-real-usage-not-a-demo">9. Real Usage, Not a Demo</a><a class="depth-3" href="#10-long-running-sessions">10. Long-Running Sessions</a><a class="depth-3" href="#11-tool-review-in-real-development-work">11. Tool Review in Real Development Work</a><a class="depth-3" href="#12-sakura-code-and-infinity">12. Sakura Code and Infinity</a><a class="depth-3" href="#13-what-these-results-say">13. What These Results Say</a><a class="depth-3" href="#14-build-what-comes-next">14. Build What Comes Next</a><a class="depth-3" href="#measurement-notes">Measurement Notes</a> </nav> </aside> <div class="post-main"> <header class="post-header"> <p class="meta"> 2026-11-18  / Sakura / Coding Agents </p> <h1 class="post-title">Introducing Sakura: A Complete Coding Agent, Yours to Define</h1>  </header> <article class="post-body">  <p><a href="/blog/introducing-sakura-zh-cn/">简体中文</a></p>
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Introducing Sakura: A Complete Coding Agent, Yours to Define"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400&family=Noto+Serif+SC:wght@300;400;500;600&display=swap"><link rel="icon" href="/blog/favicon.png" type="image/png"><link rel="alternate" type="application/rss+xml" title="Vist Writing RSS" href="/blog/rss.xml"><title>Introducing Sakura: A Complete Coding Agent, Yours to Define</title><link rel="stylesheet" href="/blog/_astro/_slug_.CTBia39z.css"></head> <body> <canvas id="mist-canvas" class="is-subtle" aria-hidden="true"></canvas> <div id="read-progress" aria-hidden="true"></div> <header class="site-header"> <div class="shell header-inner"> <a class="brand" href="/"> <span class="serif">Vist</span> </a> <nav class="site-nav" aria-label="Primary navigation"> <a href="/">Index</a> <a href="/works/">Works</a> <a href="/blog/" aria-current="page">Blog</a> <a href="https://github.com/Vist233" target="_blank" rel="noreferrer">GitHub ↗</a> </nav> </div> </header> <div class="app-root">  <main class="post-shell"> <aside class="post-aside" aria-label="Article table of contents"> <a class="back-link" href="/blog/">Back to index</a> <nav class="toc"> <p>On this page</p> <a class="depth-2" href="#part-i--why-sakura-exists">Part I — Why Sakura Exists</a><a class="depth-3" href="#1-the-next-step-for-coding-agents">1. The Next Step for Coding Agents</a><a class="depth-3" href="#2-the-problem-is-not-intelligence">2. The Problem Is Not Intelligence</a><a class="depth-3" href="#3-introducing-sakura">3. Introducing Sakura</a><a class="depth-3" href="#4-define-only-the-difference">4. Define Only the Difference</a><a class="depth-3" href="#5-the-agent-is-not-the-machine">5. The Agent Is Not the Machine</a><a class="depth-3" href="#6-one-problem-one-place">6. One Problem, One Place</a><a class="depth-3" href="#7-plugin-composition-reuse-without-coupling">7. Plugin Composition: Reuse Without Coupling</a><a class="depth-3" href="#8-a-branch-reviewer-composition-in-infinity">8. A Branch Reviewer: Composition in Infinity</a><a class="depth-2" href="#part-ii--what-we-built-and-what-we-measured">Part II — What We Built and What We Measured</a><a class="depth-3" href="#9-real-usage-not-a-demo">9. Real Usage, Not a Demo</a><a class="depth-3" href="#10-long-running-sessions">10. Long-Running Sessions</a><a class="depth-3" href="#11-tool-review-in-real-development-work">11. Tool Review in Real Development Work</a><a class="depth-3" href="#12-sakura-code-and-infinity">12. Sakura Code and Infinity</a><a class="depth-3" href="#13-what-these-results-say">13. What These Results Say</a><a class="depth-3" href="#14-build-what-comes-next">14. Build What Comes Next</a><a class="depth-3" href="#measurement-notes">Measurement Notes</a> </nav> </aside> <div class="post-main"> <header class="post-header"> <p class="meta"> 2026-11-18  / Sakura / Coding Agents </p> <h1 class="post-title">Introducing Sakura: A Complete Coding Agent, Yours to Define</h1>  </header> <article class="post-body">  <p><a href="/blog/introducing-sakura-zh-cn/">简体中文</a></p>
 <p><strong>Don’t build another Agent. Build with one.</strong></p>
 <p>Sakura provides a complete Coding Agent that you can use directly or compose into the execution capabilities of your own software.</p>
 <p>GitHub: <a href="https://github.com/Vist233/Sakura">https://github.com/Vist233/Sakura</a><br>
@@ -30,50 +30,50 @@ npm: <code>sakura-agent</code></p>
 <p>Developers get a complete agent without having to accept a closed way of running it.</p>
 <h3 id="4-define-only-the-difference">4. Define Only the Difference</h3>
 <p>Creating a complete Coding Agent can start with a few lines:</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { createAgent } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> "sakura-agent"</span><span style="color:#E1E4E8">;</span></span>
+<pre class="astro-code github-light" style="background-color:#fff;color:#24292e; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> { createAgent } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> "sakura-agent"</span><span style="color:#24292E">;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#6A737D">// model is an already configured ModelConfig or LlmClient</span></span>
-<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> agent</span><span style="color:#F97583"> =</span><span style="color:#F97583"> await</span><span style="color:#B392F0"> createAgent</span><span style="color:#E1E4E8">({ model });</span></span>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> agent</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> await</span><span style="color:#6F42C1"> createAgent</span><span style="color:#24292E">({ model });</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> run</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> agent.</span><span style="color:#B392F0">run</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"Fix the failing tests."</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> run</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> agent.</span><span style="color:#6F42C1">run</span><span style="color:#24292E">(</span><span style="color:#032F62">"Fix the failing tests."</span><span style="color:#24292E">);</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#F97583">for</span><span style="color:#F97583"> await</span><span style="color:#E1E4E8"> (</span><span style="color:#F97583">const</span><span style="color:#79B8FF"> event</span><span style="color:#F97583"> of</span><span style="color:#E1E4E8"> run.events) {</span></span>
+<span class="line"><span style="color:#D73A49">for</span><span style="color:#D73A49"> await</span><span style="color:#24292E"> (</span><span style="color:#D73A49">const</span><span style="color:#005CC5"> event</span><span style="color:#D73A49"> of</span><span style="color:#24292E"> run.events) {</span></span>
 <span class="line"><span style="color:#6A737D">  // Observe the agent.</span></span>
-<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> result</span><span style="color:#F97583"> =</span><span style="color:#F97583"> await</span><span style="color:#E1E4E8"> run.result;</span></span>
-<span class="line"><span style="color:#F97583">await</span><span style="color:#E1E4E8"> agent.</span><span style="color:#B392F0">close</span><span style="color:#E1E4E8">();</span></span></code></pre>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> result</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> await</span><span style="color:#24292E"> run.result;</span></span>
+<span class="line"><span style="color:#D73A49">await</span><span style="color:#24292E"> agent.</span><span style="color:#6F42C1">close</span><span style="color:#24292E">();</span></span></code></pre>
 <p>The default agent already provides the common capabilities of a Coding Agent. When creating a specialized agent, developers mainly define how it differs from the default rather than rewriting the execution machinery shared by all agents.</p>
 <p>For example, a read-only Reviewer can use <code>tools: ["read"]</code> to limit the tools it receives. A remote agent can inject an SSH <code>Environment</code>. A task that must pass tests before completion can define <code>goal.verify</code>. What changes is the tool set, environment, or completion condition — not the Agent Loop.</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> reviewer</span><span style="color:#F97583"> =</span><span style="color:#F97583"> await</span><span style="color:#B392F0"> createAgent</span><span style="color:#E1E4E8">({</span></span>
-<span class="line"><span style="color:#E1E4E8">  model,</span></span>
-<span class="line"><span style="color:#E1E4E8">  cwd: </span><span style="color:#9ECBFF">"./project"</span><span style="color:#E1E4E8">,</span></span>
-<span class="line"><span style="color:#E1E4E8">  tools: [</span><span style="color:#9ECBFF">"read"</span><span style="color:#E1E4E8">],</span></span>
-<span class="line"><span style="color:#E1E4E8">  rules: [</span><span style="color:#9ECBFF">"Review the code. Do not modify files."</span><span style="color:#E1E4E8">],</span></span>
-<span class="line"><span style="color:#E1E4E8">});</span></span></code></pre>
+<pre class="astro-code github-light" style="background-color:#fff;color:#24292e; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> reviewer</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> await</span><span style="color:#6F42C1"> createAgent</span><span style="color:#24292E">({</span></span>
+<span class="line"><span style="color:#24292E">  model,</span></span>
+<span class="line"><span style="color:#24292E">  cwd: </span><span style="color:#032F62">"./project"</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#24292E">  tools: [</span><span style="color:#032F62">"read"</span><span style="color:#24292E">],</span></span>
+<span class="line"><span style="color:#24292E">  rules: [</span><span style="color:#032F62">"Review the code. Do not modify files."</span><span style="color:#24292E">],</span></span>
+<span class="line"><span style="color:#24292E">});</span></span></code></pre>
 <p>Remote execution only requires replacing the Environment:</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> {</span></span>
-<span class="line"><span style="color:#E1E4E8">  createAgent,</span></span>
-<span class="line"><span style="color:#E1E4E8">  createSshEnvironment,</span></span>
-<span class="line"><span style="color:#E1E4E8">} </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> "sakura-agent"</span><span style="color:#E1E4E8">;</span></span>
+<pre class="astro-code github-light" style="background-color:#fff;color:#24292e; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#24292E">  createAgent,</span></span>
+<span class="line"><span style="color:#24292E">  createSshEnvironment,</span></span>
+<span class="line"><span style="color:#24292E">} </span><span style="color:#D73A49">from</span><span style="color:#032F62"> "sakura-agent"</span><span style="color:#24292E">;</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> environment</span><span style="color:#F97583"> =</span><span style="color:#F97583"> await</span><span style="color:#B392F0"> createSshEnvironment</span><span style="color:#E1E4E8">({</span></span>
-<span class="line"><span style="color:#E1E4E8">  host: </span><span style="color:#9ECBFF">"agent@server"</span><span style="color:#E1E4E8">,</span></span>
-<span class="line"><span style="color:#E1E4E8">  cwd: </span><span style="color:#9ECBFF">"/srv/project"</span><span style="color:#E1E4E8">,</span></span>
-<span class="line"><span style="color:#E1E4E8">});</span></span>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> environment</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> await</span><span style="color:#6F42C1"> createSshEnvironment</span><span style="color:#24292E">({</span></span>
+<span class="line"><span style="color:#24292E">  host: </span><span style="color:#032F62">"agent@server"</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#24292E">  cwd: </span><span style="color:#032F62">"/srv/project"</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#24292E">});</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> agent</span><span style="color:#F97583"> =</span><span style="color:#F97583"> await</span><span style="color:#B392F0"> createAgent</span><span style="color:#E1E4E8">({</span></span>
-<span class="line"><span style="color:#E1E4E8">  model,</span></span>
-<span class="line"><span style="color:#E1E4E8">  environment,</span></span>
-<span class="line"><span style="color:#E1E4E8">});</span></span></code></pre>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> agent</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> await</span><span style="color:#6F42C1"> createAgent</span><span style="color:#24292E">({</span></span>
+<span class="line"><span style="color:#24292E">  model,</span></span>
+<span class="line"><span style="color:#24292E">  environment,</span></span>
+<span class="line"><span style="color:#24292E">});</span></span></code></pre>
 <p>A task with a verification condition can define its completion criteria directly:</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> fixer</span><span style="color:#F97583"> =</span><span style="color:#F97583"> await</span><span style="color:#B392F0"> createAgent</span><span style="color:#E1E4E8">({</span></span>
-<span class="line"><span style="color:#E1E4E8">  model,</span></span>
-<span class="line"><span style="color:#E1E4E8">  goal: {</span></span>
-<span class="line"><span style="color:#E1E4E8">    objective: </span><span style="color:#9ECBFF">"Make all tests pass"</span><span style="color:#E1E4E8">,</span></span>
-<span class="line"><span style="color:#E1E4E8">    verify: </span><span style="color:#9ECBFF">"npm test"</span><span style="color:#E1E4E8">,</span></span>
-<span class="line"><span style="color:#E1E4E8">  },</span></span>
-<span class="line"><span style="color:#E1E4E8">});</span></span></code></pre>
+<pre class="astro-code github-light" style="background-color:#fff;color:#24292e; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> fixer</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> await</span><span style="color:#6F42C1"> createAgent</span><span style="color:#24292E">({</span></span>
+<span class="line"><span style="color:#24292E">  model,</span></span>
+<span class="line"><span style="color:#24292E">  goal: {</span></span>
+<span class="line"><span style="color:#24292E">    objective: </span><span style="color:#032F62">"Make all tests pass"</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#24292E">    verify: </span><span style="color:#032F62">"npm test"</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#24292E">  },</span></span>
+<span class="line"><span style="color:#24292E">});</span></span></code></pre>
 <p><strong>We want developers to define what makes their agents different, not rebuild what every agent needs.</strong></p>
 <h3 id="5-the-agent-is-not-the-machine">5. The Agent Is Not the Machine</h3>
 <p>An agent’s decisions, tool execution, session state, and compute resources are different concerns. An agent waiting for a model response does not need to keep a CPU busy. A Reviewer that only reads code does not need the same execution permissions as the agent doing the work.</p>
@@ -120,7 +120,7 @@ npm: <code>sakura-agent</code></p>
 <li><strong>Agent Assembly</strong> combines configuration, core modules, and plugins into a runnable agent.</li>
 </ul>
 <p>Across the codebase, these modules form five layers:</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>5  Products</span></span>
+<pre class="astro-code github-light" style="background-color:#fff;color:#24292e; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>5  Products</span></span>
 <span class="line"><span>   Sakura Code · Infinity · Evaluations</span></span>
 <span class="line"><span>   Build products from existing capabilities without adding product logic to the common core</span></span>
 <span class="line"><span></span></span>
@@ -156,20 +156,20 @@ npm: <code>sakura-agent</code></p>
 <p>The Kernel provides eight Hooks covering context construction, model requests, tool execution before and after, turn completion, errors, and events. Plugins use Hooks to participate in execution. <code>requires</code> and <code>provides</code> declare dependencies and capabilities. <code>compose()</code> expands bundles, deduplicates plugins, determines installation order, and checks for missing requirements, duplicate names, and dependency cycles before execution begins.</p>
 <p>The same mechanism supports plugin reuse in SubAgents.</p>
 <p>When a parent agent installs <code>reviewPlugin</code> and enables sub-agents with <code>subAgents: {}</code>, Agent Assembly passes the parent’s inherited plugins to its child agents. By default, <code>review</code> and <code>redaction</code> are inherited. The default exclusions are <code>agents</code>, <code>limits</code>, <code>context</code>, and <code>tools</code>. Applications can change the inheritance set through <code>notInherited</code>, using plugin names.</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> {</span></span>
-<span class="line"><span style="color:#E1E4E8">  createAgent,</span></span>
-<span class="line"><span style="color:#E1E4E8">  corePlugins,</span></span>
-<span class="line"><span style="color:#E1E4E8">  reviewPlugin,</span></span>
-<span class="line"><span style="color:#E1E4E8">} </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> "sakura-agent"</span><span style="color:#E1E4E8">;</span></span>
+<pre class="astro-code github-light" style="background-color:#fff;color:#24292e; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#24292E">  createAgent,</span></span>
+<span class="line"><span style="color:#24292E">  corePlugins,</span></span>
+<span class="line"><span style="color:#24292E">  reviewPlugin,</span></span>
+<span class="line"><span style="color:#24292E">} </span><span style="color:#D73A49">from</span><span style="color:#032F62"> "sakura-agent"</span><span style="color:#24292E">;</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> agent</span><span style="color:#F97583"> =</span><span style="color:#F97583"> await</span><span style="color:#B392F0"> createAgent</span><span style="color:#E1E4E8">({</span></span>
-<span class="line"><span style="color:#E1E4E8">  model,</span></span>
-<span class="line"><span style="color:#E1E4E8">  plugins: [</span></span>
-<span class="line"><span style="color:#F97583">    ...</span><span style="color:#B392F0">corePlugins</span><span style="color:#E1E4E8">(),</span></span>
-<span class="line"><span style="color:#B392F0">    reviewPlugin</span><span style="color:#E1E4E8">({ llm: reviewerModel }),</span></span>
-<span class="line"><span style="color:#E1E4E8">  ],</span></span>
-<span class="line"><span style="color:#E1E4E8">  subAgents: {},</span></span>
-<span class="line"><span style="color:#E1E4E8">});</span></span></code></pre>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> agent</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> await</span><span style="color:#6F42C1"> createAgent</span><span style="color:#24292E">({</span></span>
+<span class="line"><span style="color:#24292E">  model,</span></span>
+<span class="line"><span style="color:#24292E">  plugins: [</span></span>
+<span class="line"><span style="color:#D73A49">    ...</span><span style="color:#6F42C1">corePlugins</span><span style="color:#24292E">(),</span></span>
+<span class="line"><span style="color:#6F42C1">    reviewPlugin</span><span style="color:#24292E">({ llm: reviewerModel }),</span></span>
+<span class="line"><span style="color:#24292E">  ],</span></span>
+<span class="line"><span style="color:#24292E">  subAgents: {},</span></span>
+<span class="line"><span style="color:#24292E">});</span></span></code></pre>
 <p>Here, <code>agents</code> creates and manages child agents, while <code>review</code> checks tool calls. They are implemented independently and composed by Agent Assembly.</p>
 <p>A SubAgent can therefore reuse AutoReview without reimplementing the review logic and without making the <code>agents</code> plugin import the source code of the <code>review</code> plugin.</p>
 <p><strong>Independent modules do not mean isolated capabilities. They mean reuse does not require source-level coupling.</strong></p>
@@ -186,16 +186,16 @@ npm: <code>sakura-agent</code></p>
 <li>Return the result through a separate advice channel.</li>
 </ol>
 <p>The core assembly can be summarized as:</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#B392F0">fork</span><span style="color:#E1E4E8">: (</span><span style="color:#FFAB70">path</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=></span><span style="color:#E1E4E8"> live.</span><span style="color:#B392F0">fork</span><span style="color:#E1E4E8">(path),</span></span>
+<pre class="astro-code github-light" style="background-color:#fff;color:#24292e; overflow-x: auto;" tabindex="0" data-language="typescript"><code><span class="line"><span style="color:#6F42C1">fork</span><span style="color:#24292E">: (</span><span style="color:#E36209">path</span><span style="color:#24292E">) </span><span style="color:#D73A49">=></span><span style="color:#24292E"> live.</span><span style="color:#6F42C1">fork</span><span style="color:#24292E">(path),</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#B392F0">openReviewer</span><span style="color:#E1E4E8">: (</span><span style="color:#FFAB70">sessionFile</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">guard</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">wrapClient</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=></span></span>
-<span class="line"><span style="color:#B392F0">  build</span><span style="color:#E1E4E8">(</span></span>
-<span class="line"><span style="color:#E1E4E8">    sessionFile,</span></span>
-<span class="line"><span style="color:#E1E4E8">    [</span><span style="color:#F97583">...</span><span style="color:#B392F0">corePlugins</span><span style="color:#E1E4E8">(), guard],</span></span>
-<span class="line"><span style="color:#B392F0">    wrapClient</span><span style="color:#E1E4E8">(deps.client)</span></span>
-<span class="line"><span style="color:#E1E4E8">  ),</span></span>
+<span class="line"><span style="color:#6F42C1">openReviewer</span><span style="color:#24292E">: (</span><span style="color:#E36209">sessionFile</span><span style="color:#24292E">, </span><span style="color:#E36209">guard</span><span style="color:#24292E">, </span><span style="color:#E36209">wrapClient</span><span style="color:#24292E">) </span><span style="color:#D73A49">=></span></span>
+<span class="line"><span style="color:#6F42C1">  build</span><span style="color:#24292E">(</span></span>
+<span class="line"><span style="color:#24292E">    sessionFile,</span></span>
+<span class="line"><span style="color:#24292E">    [</span><span style="color:#D73A49">...</span><span style="color:#6F42C1">corePlugins</span><span style="color:#24292E">(), guard],</span></span>
+<span class="line"><span style="color:#6F42C1">    wrapClient</span><span style="color:#24292E">(deps.client)</span></span>
+<span class="line"><span style="color:#24292E">  ),</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#B392F0">advise</span><span style="color:#E1E4E8">: (</span><span style="color:#FFAB70">text</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=></span><span style="color:#E1E4E8"> advice.</span><span style="color:#B392F0">deliver</span><span style="color:#E1E4E8">(text),</span></span></code></pre>
+<span class="line"><span style="color:#6F42C1">advise</span><span style="color:#24292E">: (</span><span style="color:#E36209">text</span><span style="color:#24292E">) </span><span style="color:#D73A49">=></span><span style="color:#24292E"> advice.</span><span style="color:#6F42C1">deliver</span><span style="color:#24292E">(text),</span></span></code></pre>
 <p>The Reviewer can retain model-side tool declarations without gaining the corresponding execution permissions. The Guard checks and rejects disallowed operations before the tools actually run.</p>
 <p>The Reviewer uses an independent session and does not overwrite the main agent’s history. It returns its review advice to the main agent, which decides whether to accept it.</p>
 <p>The <code>build</code> function, review orchestration, structured results, lifecycle management, and advice delivery belong to Infinity. Sakura provides the reusable sessions, model client, plugins, and execution boundaries.</p>
@@ -408,7 +408,7 @@ npm: <code>sakura-agent</code></p>
 <p>Sakura Code and Infinity are two different products built with Sakura. One validates the practical capability of a complete Coding Agent. The other validates whether those capabilities can be recombined into a more complex system.</p>
 <p>We want developers to use Sakura to build agents we have not thought of in advance.</p>
 <p>A framework with real composability should not be limited to the products its authors have already designed.</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">npm</span><span style="color:#9ECBFF"> install</span><span style="color:#9ECBFF"> sakura-agent</span></span></code></pre>
+<pre class="astro-code github-light" style="background-color:#fff;color:#24292e; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6F42C1">npm</span><span style="color:#032F62"> install</span><span style="color:#032F62"> sakura-agent</span></span></code></pre>
 <p>TypeScript · MIT License · Node.js 22.18+</p>
 <p>GitHub: <a href="https://github.com/Vist233/Sakura">https://github.com/Vist233/Sakura</a></p>
 <p><strong>Sakura — A complete Coding Agent, yours to define.</strong></p>
@@ -422,6 +422,13 @@ npm: <code>sakura-agent</code></p>
 <li>Review records exist from 2026-11-10 18:34 onward. Sessions on November 9 therefore have no review-event records.</li>
 <li>Provider cache reads are cumulative across requests. They should not be described as total context size or cost savings independently created by Sakura.</li>
 <li>The denial total includes cancellations and false positives. Do not describe all 75 denials as successful interceptions of dangerous operations.</li>
-</ul>  </article> <nav class="post-switcher" aria-label="Article navigation"> <div> <span>Previous</span> <a href="/blog/prompt-to-engineering-system/">从 Prompt 到工程系统：LLM 何时必须被工程化</a> </div> <div> <span>Next</span> <a href="/blog/introducing-sakura-zh-cn/">Sakura：一个可由你定义的完整编程 Agent</a> </div> </nav> </div> </main>  <footer class="site-footer"> <span>ZhangYvJing / Blog</span> <span class="footer-links"> <a href="/blog/rss.xml">RSS</a>
-·
-<a href="https://x.com/zhangyvjing233">X</a> </span> </footer> </div> </body></html>
+</ul>  </article> <nav class="post-switcher" aria-label="Article navigation"> <div> <span>Previous</span> <a href="/blog/prompt-to-engineering-system/">从 Prompt 到工程系统：LLM 何时必须被工程化</a> </div> <div> <span>Next</span> <a href="/blog/introducing-sakura-zh-cn/">Sakura：一个可由你定义的完整编程 Agent</a> </div> </nav> </div> </main>  </div> <footer class="site-footer"> <div class="shell footer-inner mono"> <span>zhangyvjing.com</span> <span class="footer-links"> <a href="/blog/rss.xml">RSS</a> <span>/</span> <a href="mailto:zhangyvjing@outlook.com">Email</a> <span>/</span> <a href="https://github.com/Vist233" target="_blank" rel="noreferrer">GitHub</a> <span>/</span> <a href="https://x.com/zhangyvjing233" target="_blank" rel="noreferrer">X</a> </span> </div> </footer> <script src="/blog/mist.js"></script> <script>
+      (function () {
+        var bar = document.getElementById("read-progress");
+        if (!bar || !document.querySelector(".post-body")) return;
+        window.addEventListener("scroll", function () {
+          var max = document.documentElement.scrollHeight - window.innerHeight;
+          bar.style.width = (max > 0 ? Math.min(100, (window.scrollY / max) * 100) : 0) + "%";
+        }, { passive: true });
+      })();
+    </script> </body> </html>
