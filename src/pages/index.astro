@@ -9,21 +9,19 @@ const base = import.meta.env.BASE_URL.endsWith("/")
   ? import.meta.env.BASE_URL
   : `${import.meta.env.BASE_URL}/`;
 ---
-<BaseLayout title="ZhangYvJing's Blog" description="Finding the balance between product and engineering.">
-  <main class="archive-page">
+<BaseLayout title="Writing — Vist" description="Writing archive by Vist.">
+  <main class="shell archive-page">
     <header class="archive-head">
-      <h1 class="archive-title">Writing<br /><span class="hollow">index</span></h1>
+      <h1 class="archive-title">Writing</h1>
     </header>
     <ol class="post-list">
       {posts.map((post, index) => (
-        <li>
-          <span class="post-no">{String(index + 1).padStart(2, "0")}</span>
-          <div>
-            <time class="meta" datetime={post.data.date.toISOString()}>{post.data.date.toISOString().slice(0, 10)}</time>
-            <a href={`${base}${post.slug}/`}>{post.data.title}</a>
-            {post.data.description && <p>{post.data.description}</p>}
-          </div>
-          <span class="meta tags">{post.data.tags.join(" / ")}</span>
+        <li class="post-row">
+          <span class="post-no mono">{String(index + 1).padStart(2, "0")}</span>
+          <a class="post-row-title" href={`${base}${post.slug}/`}>{post.data.title}</a>
+          <time class="post-date mono" datetime={post.data.date.toISOString()}>
+            {post.data.date.toISOString().slice(0, 10)}
+          </time>
         </li>
       ))}
     </ol>

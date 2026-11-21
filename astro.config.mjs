@@ -5,6 +5,9 @@ export default defineConfig({
   site: "https://zhangyvjing.com",
   base: "/blog",
   markdown: {
+    shikiConfig: {
+      theme: "github-light",
+    },
     remarkPlugins: [remarkAdmonitions],
   },
 });

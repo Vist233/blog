@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
 
-const { title = "ZhangYvJing Blog", description = "Finding the balance between product and engineering." } = Astro.props;
+const { title = "Writing — Vist", description = "Writing archive by Vist." } = Astro.props;
 const base = import.meta.env.BASE_URL.endsWith("/")
   ? import.meta.env.BASE_URL
   : `${import.meta.env.BASE_URL}/`;
@@ -16,35 +16,59 @@ const base = import.meta.env.BASE_URL.endsWith("/")
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400&family=Noto+Serif+SC:wght@300;400;500;600&display=swap"
     />
     <link rel="icon" href={`${base}favicon.png`} type="image/png" />
-    <link rel="alternate" type="application/rss+xml" title="ZhangYvJing Blog RSS" href={`${base}rss.xml`} />
+    <link rel="alternate" type="application/rss+xml" title="Vist Writing RSS" href={`${base}rss.xml`} />
     <title>{title}</title>
   </head>
   <body>
-    <div class="shell">
-      <nav class="site-nav" aria-label="Site navigation">
-        <a class="brand" href="https://zhangyvjing.com/">
-          <span class="signal"></span>
-          <span>ZhangYvJing</span>
+    <canvas id="mist-canvas" class="is-subtle" aria-hidden="true"></canvas>
+    <div id="read-progress" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="/">
+          <span class="serif">Vist</span>
         </a>
-        <div class="nav-links">
-          <a href="https://zhangyvjing.com/works/">Works</a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Index</a>
+          <a href="/works/">Works</a>
           <a href={base} aria-current="page">Blog</a>
-          <a href="https://github.com/Vist233">GitHub</a>
-          <a href="mailto:zhangyvjing@outlook.com">Contact</a>
-        </div>
-      </nav>
+          <a href="https://github.com/Vist233" target="_blank" rel="noreferrer">GitHub ↗</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="app-root">
       <slot />
-      <footer class="site-footer">
-        <span>ZhangYvJing / Blog</span>
+    </div>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner mono">
+        <span>zhangyvjing.com</span>
         <span class="footer-links">
           <a href={`${base}rss.xml`}>RSS</a>
-          ·
-          <a href="https://x.com/zhangyvjing233">X</a>
+          <span>/</span>
+          <a href="mailto:zhangyvjing@outlook.com">Email</a>
+          <span>/</span>
+          <a href="https://github.com/Vist233" target="_blank" rel="noreferrer">GitHub</a>
+          <span>/</span>
+          <a href="https://x.com/zhangyvjing233" target="_blank" rel="noreferrer">X</a>
         </span>
-      </footer>
-    </div>
+      </div>
+    </footer>
+
+    <script is:inline src={`${base}mist.js`}></script>
+    <script is:inline>
+      (function () {
+        var bar = document.getElementById("read-progress");
+        if (!bar || !document.querySelector(".post-body")) return;
+        window.addEventListener("scroll", function () {
+          var max = document.documentElement.scrollHeight - window.innerHeight;
+          bar.style.width = (max > 0 ? Math.min(100, (window.scrollY / max) * 100) : 0) + "%";
+        }, { passive: true });
+      })();
+    </script>
   </body>
 </html>
